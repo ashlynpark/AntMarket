@@ -1,5 +1,5 @@
 {
-  "name": "antmarket",
+  "name": "ant-market",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
@@ -15,7 +15,12 @@
     "react-native": "0.71.7"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
+    "@babel/core": "^7.20.0",
+    "@tsconfig/react-native": "^3.0.0",
+    "@types/jest": "^29.5.1",
+    "@types/react": "^18.2.0",
+    "@types/react-test-renderer": "^18.0.0",
+    "typescript": "^5.0.4"
   },
   "private": true
 }
