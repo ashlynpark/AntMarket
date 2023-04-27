@@ -7,7 +7,6 @@ SETUP:
 
 Running:
 --> NPM start
----> and choose the appropriate dev. environment
-
+---> and choose the appropriate development environment
 
 
