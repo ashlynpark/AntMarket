@@ -13,7 +13,7 @@ Running:
 
 --> npm start  
 
----> then choose the appropriate development environment  
+---> then choose the appropriate development environment, Scan the QR code with your phone camera and it should launch Expo go (app).
 
 
 
