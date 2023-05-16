@@ -60,7 +60,7 @@ const TabNavigator = () => {
                     },
                     tabBarLabel: "Home",
                     tabBarLabelStyle: {
-                        color: 'white'
+                        color: 'red'
                     }
 
                     
@@ -76,9 +76,9 @@ const TabNavigator = () => {
                         width: 35,
                         height: 35,
                         borderRadius: 35 / 2,
-                        borderColor: '#FFFFFF',
+                        borderColor: '#00000',
                         borderWidth: 1}}>
-                    <MaterialCommunityIcons name="calendar-clock-outline" size={20} color="white" style={{position: "absolute", left: 35/2 - 11, top: 35/2 - 11}}/>
+                    <MaterialCommunityIcons name="calendar-clock-outline" size={20} color="black" style={{position: "absolute", left: 35/2 - 11, top: 35/2 - 11}}/>
                     </View>,
                     tabBarStyle: {
                         backgroundColor: '#194260',
@@ -87,7 +87,7 @@ const TabNavigator = () => {
                     },
                     tabBarLabel: "Trips",
                     tabBarLabelStyle: {
-                        color: 'white'
+                        color: 'red'
                     }
                 }}
             />
