@@ -5,6 +5,7 @@ import { View } from 'react-native';
 import HomeScreen from '../screens/HomeScreen';
 import CreateScreen from '../screens/CreateScreen';
 import ProfileScreen from '../screens/ProfileScreen';
+import OnBord from "../screens/login/OnBord";
 
 
 const Tab = createBottomTabNavigator();
@@ -42,6 +43,18 @@ const TabNavigator = () => {
                     headerShown: false,
                     
                     tabBarLabel: "Profile",
+                    tabBarLabelStyle: {
+                        color: 'red'
+                    }
+                }}
+            />
+            <Tab.Screen
+                name="Cart"
+                component={OnBord}
+                options={{
+                    headerShown: false,
+                    
+                    tabBarLabel: "Cart",
                     tabBarLabelStyle: {
                         color: 'red'
                     }
