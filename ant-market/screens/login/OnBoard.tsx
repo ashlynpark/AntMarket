@@ -20,32 +20,38 @@ const OnBord = () => {
                 <Header/>
                 <View style={{marginBottom:'0%'}}>
                     <Onboarding 
-                        onDone={() => navigation.replace("Home"
+                        
                         containerStyles={{maxHeight:580}}
+                        imageContainerStyles={{
+                            paddingBottom:"90%",
+                            height:1,
+                            width:1
+                                                
+                        }}
 
                         
                         pages={[
                             {
                             backgroundColor: '#fff',
-                            image: <Image source={require('ant-market/assets/favicon.png')} />,
+                            image: <Image source={require('ant-market/assets/buy.png')} />,
                             title: 'Buy Items',
                             subtitle: 'Browse and find items that your fellow UCI students would like to pass on!',
                             },
                             {
                             backgroundColor: '#fff',
-                            image: <Image source={require('ant-market/assets/favicon.png')} />,
+                            image: <Image source={require('ant-market/assets/sell.png')} />,
                             title: 'Sell Items',
                             subtitle: 'Have some stuff you don’t need? Sell your items to fellow UCI students!',
                             },
                             {
                             backgroundColor: '#fff',
-                            image: <Image source={require('ant-market/assets/favicon.png')} />,
+                            image: <Image source={require('ant-market/assets/swipe.png')} />,
                             title: 'Swipe To Browse',
                             subtitle: 'No time? No worries! You like what you see? Swipe right; don’t like what you see? Swipe left and move on!',
                             },
                             {
                             backgroundColor: '#fff',
-                            image: <Image source={require('ant-market/assets/favicon.png')} />,
+                            image: <Image source={require('ant-market/assets/uci.png')} />,
                             title: 'Before we get you started...',
                             subtitle: 'If you are a UCI affiliate, you may log in using your UCI credentials to be able to sell items on the AntMarket.',
                             },

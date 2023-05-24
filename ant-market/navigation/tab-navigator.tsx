@@ -37,18 +37,6 @@ const TabNavigator = () => {
                 }}
             />
             <Tab.Screen
-                name="Profile"
-                component={ProfileScreen}
-                options={{
-                    headerShown: false,
-                    
-                    tabBarLabel: "Profile",
-                    tabBarLabelStyle: {
-                        color: 'red'
-                    }
-                }}
-            />
-            <Tab.Screen
                 name="Cart"
                 component={OnBord}
                 options={{
@@ -60,6 +48,19 @@ const TabNavigator = () => {
                     }
                 }}
             />
+            <Tab.Screen
+                name="Profile"
+                component={ProfileScreen}
+                options={{
+                    headerShown: false,
+                    
+                    tabBarLabel: "Profile",
+                    tabBarLabelStyle: {
+                        color: 'red'
+                    }
+                }}
+            />
+            
         </Tab.Navigator>
     )
 }
