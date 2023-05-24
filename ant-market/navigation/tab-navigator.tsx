@@ -6,6 +6,7 @@ import HomeScreen from '../screens/HomeScreen';
 import CreateScreen from '../screens/CreateScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import OnBord from "../screens/login/OnBoard";
+import SignIn from "../screens/login/SignIn";
 
 
 const Tab = createBottomTabNavigator();
@@ -38,7 +39,7 @@ const TabNavigator = () => {
             />
             <Tab.Screen
                 name="Cart"
-                component={OnBord}
+                component={SignIn}
                 options={{
                     headerShown: false,
                     
