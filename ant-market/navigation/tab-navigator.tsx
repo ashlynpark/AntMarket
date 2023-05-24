@@ -5,7 +5,7 @@ import { View } from 'react-native';
 import HomeScreen from '../screens/HomeScreen';
 import CreateScreen from '../screens/CreateScreen';
 import ProfileScreen from '../screens/ProfileScreen';
-import OnBord from "../screens/login/OnBord";
+import OnBord from "../screens/login/OnBoard";
 
 
 const Tab = createBottomTabNavigator();
