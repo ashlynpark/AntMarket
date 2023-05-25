@@ -1,18 +1,28 @@
-import {StyleSheet, Text, View, TouchableOpacity, SafeAreaView, ScrollView, Touchable, FlatList} from 'react-native';
+import {StyleSheet, Text, View, Dimensions, TouchableOpacity, SafeAreaView, ScrollView, Touchable, FlatList, Image} from 'react-native';
 import Screen from '../components/Screen';
 import Header from '../components/Header';
-import { useFonts, OpenSans_300Light } from '@expo-google-fonts/open-sans';
 import { FontAwesome5 } from '@expo/vector-icons';  
+import Carousel from 'react-native-reanimated-carousel';
 
 
 const HomeScreen = () => {
-    let [fontsLoaded] = useFonts({
-        OpenSans_300Light,
-    });
-    
-    if (!fontsLoaded) {
-        return null;
-    }
+    const width = Dimensions.get('window').width;
+    const categories = [
+                            {
+                                'name': 'Furniture',
+                                'img': 'https://images.unsplash.com/photo-1550254478-ead40cc54513?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2761&q=80'},
+                            {
+                                'name' : 'Supplies',
+                                'img' : 'https://images.unsplash.com/photo-1629470937928-5f873c06005c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80'},
+                            {
+                                'name' : 'Electronics',
+                                'img': 'https://images.unsplash.com/photo-1550009158-9ebf69173e03?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3001&q=80'},
+                            {
+                                'name': 'Clothing',
+                                'img':'https://images.unsplash.com/photo-1576188973526-0e5d7047b0cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1478&q=80'},
+                            {
+                                'name': 'Miscellaneous',
+                                'img' : 'https://images.squarespace-cdn.com/content/v1/5b60d4fa70e802968763e7f5/1a57663c-9766-429c-b597-4ae31d4aff49/Screen+Shot+2023-01-26+at+5.53.11+PM.png?format=2500w'}]
 
     return(
         <Screen preset="scroll">
@@ -20,10 +30,15 @@ const HomeScreen = () => {
                 <Header/>
                 <View>
                     <Search/>
-                    <Tags tags={["furniture", "textbook", "vintage", "sofa", "shirt"]}/>
-                    <Text>
-                        Home Page
-                    </Text>
+                    <View>
+                        <Tags tags={["furniture", "textbook", "vintage", "sofa", "shirt"]}/>
+                    </View>
+                    <View style={{margin: '5%'}}>
+                        <Text style={styles.header}>
+                            Browse Categories
+                        </Text>
+                        <CategoryButtons categories={categories}/>
+                    </View>
                 </View>
             </SafeAreaView>
         </Screen>
@@ -81,6 +96,25 @@ const Tags = (props: {tags:string[]}) =>{
     )
 }
 
+const CategoryButtons = (props: {categories:any[]}) => {
+    return(
+        <View style={{flex: 1}}>
+            {props.categories.map((item, index) => { 
+                return(
+                    <TouchableOpacity key={index} style={styles.catButt} onPress={() => {console.log(item.name)}}>
+                        <View style={{flex: 1}}>
+                            <Image source={{uri: item.img}} style={styles.catButtImg} />
+                        </View>
+                        <View style={{flex: 1, justifyContent: 'center'}}>
+                            <Text style={styles.catButtTitle}>{item.name}</Text>
+                        </View>
+                    </TouchableOpacity>
+                )
+            })}
+        </View>
+    )
+}
+
 const styles = StyleSheet.create({
     searchBarContainer: {
         marginVertical: '5%',
@@ -125,6 +159,37 @@ const styles = StyleSheet.create({
         shadowRadius: 4,
         elevation: 5,
         marginHorizontal: '2%'
+    },
+    header: {
+        fontSize: 22,
+        fontFamily: 'OpenSans_700Bold',
+        color: '#113125'
+    },
+    catButt: {
+        borderRadius: 10,
+        alignSelf: 'center',
+        flexDirection: 'row',
+        flex: 1,
+        width: '100%',
+        marginVertical: '5%',
+        height: 95,
+        backgroundColor: 'white',
+        shadowColor: 'black',
+        shadowOffset: {width: 0, height: 0},
+        shadowOpacity: 0.25
+    },
+    catButtImg: {
+        height: '100%',
+        borderBottomLeftRadius: 10,
+        borderTopLeftRadius: 10,
+        overflow: 'hidden',
+        resizeMode: 'cover'
+
+    },
+    catButtTitle: {
+        fontSize: 20,
+        fontFamily: 'OpenSans_600SemiBold',
+        alignSelf: 'center'
     }
 })
 
