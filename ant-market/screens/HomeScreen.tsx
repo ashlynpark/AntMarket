@@ -26,8 +26,8 @@ const HomeScreen = () => {
 
     return(
         <Screen preset="scroll">
+            <Header/>
             <SafeAreaView>
-                <Header/>
                 <View>
                     <Search/>
                     <View>
