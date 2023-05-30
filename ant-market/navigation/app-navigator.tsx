@@ -7,7 +7,7 @@ import TabNavigator from "./tab-navigator";
 
 
 import HomeScreen from '../screens/HomeScreen';
-import SearchScreen from '../screens/CreateScreen';
+import SearchScreen from '../screens/ListingsScreen';
 
 const Stack = createNativeStackNavigator()
 
