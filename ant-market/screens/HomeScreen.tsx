@@ -7,7 +7,7 @@ const HomeScreen = () => {
     return(
         <Screen preset="scroll">
             <SafeAreaView>
-                <Text>
+                <Text style={styles.header}>
                     Home Page
                 </Text>
             </SafeAreaView>
@@ -16,5 +16,10 @@ const HomeScreen = () => {
     );
 
 }
-
+const styles = StyleSheet.create({
+  header:{
+    //no hyphen 
+    fontSize:60,
+  }
+})
 export default HomeScreen;
