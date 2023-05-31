@@ -29,7 +29,7 @@ const HomeScreen = () => {
             <Header/>
             <SafeAreaView>
                 <View>
-                    <Search/>
+                    {/*<Search/>
                     <View>
                         <Tags tags={["furniture", "textbook", "vintage", "sofa", "shirt"]}/>
                     </View>
@@ -39,6 +39,7 @@ const HomeScreen = () => {
                         </Text>
                         <CategoryButtons categories={categories}/>
                     </View>
+                    */}
                 </View>
             </SafeAreaView>
         </Screen>

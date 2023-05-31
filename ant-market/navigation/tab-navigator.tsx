@@ -5,7 +5,7 @@ import { View } from 'react-native';
 
 import HomeScreen from '../screens/HomeScreen';
 import CreateScreen from '../screens/CreateScreen';
-import ProfileScreen from '../screens/ProfileScreen';
+import ProfileScreen from '../screens/Profile/ProfileScreen';
 import OnBord from "../screens/login/OnBoard";
 import SignIn from "../screens/login/SignIn";
 import StartPage from "../screens/login/StartPage";
