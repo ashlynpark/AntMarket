@@ -8,7 +8,9 @@ import ProfileScreen from '../screens/ProfileScreen';
 import OnBord from "../screens/login/OnBoard";
 import SignIn from "../screens/login/SignIn";
 import StartPage from "../screens/login/StartPage";
-
+import CheckoutScreen from "../screens/CheckoutScreen";
+import CartScreen from "../screens/CartScreen";
+import ConfirmationScreen from "../screens/ConfirmationScreen";
 
 const Tab = createBottomTabNavigator();
 const TabNavigator = () => {
@@ -40,7 +42,7 @@ const TabNavigator = () => {
             />
             <Tab.Screen
                 name="Cart"
-                component={StartPage}
+                component={CartScreen}
                 options={{
                     headerShown: false,
                     
@@ -62,6 +64,30 @@ const TabNavigator = () => {
                     }
                 }}
             />
+             {/* <Tab.Screen
+                name="Checkout"
+                component={CheckoutScreen}
+                options={{
+                    headerShown: false,
+                    
+                    tabBarLabel: "Checkout",
+                    tabBarLabelStyle: {
+                        color: 'red'
+                    }
+                }}
+            />
+            <Tab.Screen
+                name="Confirmation"
+                component={ConfirmationScreen}
+                options={{
+                    headerShown: false,
+                    
+                    tabBarLabel: "Confirmation",
+                    tabBarLabelStyle: {
+                        color: 'red'
+                    }
+                }}
+            /> */}
             
         </Tab.Navigator>
     )
