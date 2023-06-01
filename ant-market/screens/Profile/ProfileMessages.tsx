@@ -13,7 +13,7 @@ const ProfileMessages = () => {
             <ProfileHeader/>
             <SafeAreaView>
                 <Text>
-                    Profile page
+                    Profile Messages
                 </Text>
             </SafeAreaView>
         </Screen>

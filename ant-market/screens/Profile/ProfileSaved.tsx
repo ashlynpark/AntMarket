@@ -13,7 +13,7 @@ const ProfileSaved = () => {
             <ProfileHeader/>
             <SafeAreaView>
                 <Text>
-                    Profile page
+                    Profile Saved
                 </Text>
             </SafeAreaView>
         </Screen>

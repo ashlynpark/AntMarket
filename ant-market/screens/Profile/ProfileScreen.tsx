@@ -3,6 +3,7 @@ import Screen from '../../components/Screen';
 import Header from '../../components/Header';
 import ProfileHeader from '../../components/Profile/ProfileHeader';
 import { useFonts, OpenSans_300Light } from '@expo-google-fonts/open-sans';
+import ProfileShop from '../../components/Profile/ProfileShop';
 
 
 const ProfileScreen = () => {
@@ -11,11 +12,12 @@ const ProfileScreen = () => {
         <Screen preset="scroll">
             <Header/>
             <ProfileHeader/>
+             
             <SafeAreaView>
                 <Text>
-                    Profile page
                 </Text>
             </SafeAreaView>
+            <ProfileShop/>
         </Screen>
 
     );

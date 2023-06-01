@@ -8,6 +8,10 @@ import TabNavigator from "./tab-navigator";
 
 import HomeScreen from '../screens/HomeScreen';
 import SearchScreen from '../screens/CreateScreen';
+import ProfileSaved from "../screens/Profile/ProfileSaved";
+import ProfileTabs from "../components/Profile/ProfileTabs";
+import ProfileMessages from "../screens/Profile/ProfileMessages";
+import ProfileScreen from "../screens/Profile/ProfileScreen";
 
 const Stack = createNativeStackNavigator()
 
@@ -21,11 +25,38 @@ const AppStack = () => {
                     headerShown: false
                 }}
             />
+            <Stack.Screen name="ProfileScreen" 
+                component={ProfileScreen} 
+                options={{
+                    headerShown: false
+                }}
+            />
+            <Stack.Screen name="ProfileTabs" 
+                component={ProfileTabs} 
+                options={{
+                    headerShown: false
+                }}
+            />
+
+            <Stack.Screen name="ProfileSaved" 
+                component={ProfileSaved} 
+                options={{
+                    headerShown: false
+                }}
+            />
+            <Stack.Screen name="ProfileMessages" 
+                component={ProfileMessages}
+                options={{
+                    headerShown: false
+                }}
+            />
         </Stack.Navigator>
 
 
     )
 }
+
+const Stack2 = 
 
 export const AppNavigator = (props:any) => {
     return (
