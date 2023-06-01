@@ -9,6 +9,7 @@ import ProfileScreen from '../screens/ProfileScreen';
 import OnBord from "../screens/login/OnBoard";
 import SignIn from "../screens/login/SignIn";
 import StartPage from "../screens/login/StartPage";
+import HomeNavigator from "./home-navigator";
 
 
 
@@ -18,7 +19,7 @@ const TabNavigator = () => {
         <Tab.Navigator>
             <Tab.Screen
                 name="Home"
-                component={HomeScreen}
+                component={HomeNavigator}
                 options={ () => ({
                     headerShown: false,
                     tabBarIcon: ({focused}) => {
