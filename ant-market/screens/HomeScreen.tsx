@@ -25,6 +25,7 @@ const HomeScreen = () => {
                                 'img' : 'https://images.squarespace-cdn.com/content/v1/5b60d4fa70e802968763e7f5/1a57663c-9766-429c-b597-4ae31d4aff49/Screen+Shot+2023-01-26+at+5.53.11+PM.png?format=2500w'}]
 
     return(
+        
         <Screen preset="scroll">
             <Header/>
             <SafeAreaView>
