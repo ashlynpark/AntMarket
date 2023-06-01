@@ -1,0 +1,79 @@
+[
+    {
+        "name": "chair",
+        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex",
+        "location": "San Francisco, California",
+        "image": "https://www.ikea.com/us/en/images/products/hattefjaell-office-chair-with-armrests-smidig-black__1019087_pe831296_s5.jpg",
+        "bg": "https://www.ikea.com/us/en/images/products/hattefjaell-office-chair-with-armrests-smidig-black__1019087_pe831296_s5.jpg"
+    },
+    {
+        "name": "Table",
+        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "location": "Houston, Texas",
+        "image": "https://i.etsystatic.com/26947746/r/il/bffa36/2992459840/il_fullxfull.2992459840_t9wa.jpg",
+        "bg": "https://i.etsystatic.com/26947746/r/il/bffa36/2992459840/il_fullxfull.2992459840_t9wa.jpg"
+    },
+    {
+        "name": "books",
+        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "location": "San Francisco, California",
+        "image": "https://bdhs.wayne.k12.in.us/wp-content/uploads/2019/08/textbooks.jpg",
+        "bg": "https://bdhs.wayne.k12.in.us/wp-content/uploads/2019/08/textbooks.jpg"
+    },
+    {
+        "name": "lamp",
+        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "location": "New York City, New York",
+        "image": "https://www.ikea.com/us/en/images/products/ranarp-work-lamp-off-white__0879626_pe654346_s5.jpg",
+        "bg": "https://www.ikea.com/us/en/images/products/ranarp-work-lamp-off-white__0879626_pe654346_s5.jpg"
+    },
+    {
+        "name": "air fryer",
+        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "location": "Chicago, Illinois",
+        "image": "https://www.cnet.com/a/img/resize/e5abdd439ae36558ecb1ff155d49054b9adb833d/hub/2018/04/27/c9864b68-88d9-452c-8e51-2e65ef2a26a5/philips-xxl-air-fryer-1.jpg?auto=webp&fit=crop&height=1200&width=1200",
+        "bg": "https://www.cnet.com/a/img/resize/e5abdd439ae36558ecb1ff155d49054b9adb833d/hub/2018/04/27/c9864b68-88d9-452c-8e51-2e65ef2a26a5/philips-xxl-air-fryer-1.jpg?auto=webp&fit=crop&height=1200&width=1200"
+    },
+    {
+        "name": "backpack",
+        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "location": "Los Angeles, California",
+        "image": "https://www.travelandleisure.com/thmb/0h8NWjHdtZ0aOBjeqUJWTxtMPnE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/tal-primary-most-stylish-travel-backpacks-jkim-0059.jpg-9159581ee6cc49599623f433026226b4.jpg",
+        "bg": "https://www.travelandleisure.com/thmb/0h8NWjHdtZ0aOBjeqUJWTxtMPnE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/tal-primary-most-stylish-travel-backpacks-jkim-0059.jpg-9159581ee6cc49599623f433026226b4.jpg"
+    },
+    {
+        "name": "graphing calculator",
+        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "location": "Dallas, Texas",
+        "image": "https://i.ebayimg.com/images/g/KS8AAOSwqnJjjo7k/s-l1600.jpg",
+        "bg": "https://i.ebayimg.com/images/g/KS8AAOSwqnJjjo7k/s-l1600.jpg"
+    },
+    {
+        "name": "knife set",
+        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "location": "Miami, Florida",
+        "image": "https://reviewed-com-res.cloudinary.com/image/fetch/s--mKs9rteB--/b_white,c_limit,cs_srgb,f_auto,fl_progressive.strip_profile,g_center,q_auto,w_1200/https://reviewed-production.s3.amazonaws.com/1585315284631/best-knife-sets-under-200.jpg",
+        "bg": "https://reviewed-com-res.cloudinary.com/image/fetch/s--mKs9rteB--/b_white,c_limit,cs_srgb,f_auto,fl_progressive.strip_profile,g_center,q_auto,w_1200/https://reviewed-production.s3.amazonaws.com/1585315284631/best-knife-sets-under-200.jpg"
+    },
+    {
+        "name": "wardrobe",
+        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "location": "Houston, Texas",
+        "image": "https://www.ikea.com/us/en/images/products/kleppstad-wardrobe-with-2-doors-white__0733323_pe748780_s5.jpg",
+        "bg": "https://www.ikea.com/us/en/images/products/kleppstad-wardrobe-with-2-doors-white__0733323_pe748780_s5.jpg"
+    },
+    {
+        "name": "shoes",
+        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "location": "Atlanta, Georgia",
+        "image": "https://images.urbndata.com/is/image/FreePeople/78468865_010_m/?$a15-pdp-detail-shot$&fit=constrain&qlt=80&wid=640",
+        "bg": "https://images.urbndata.com/is/image/FreePeople/78468865_010_m/?$a15-pdp-detail-shot$&fit=constrain&qlt=80&wid=640"
+    },
+    {
+        "name": "sweatshirt",
+        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor piscing elit, sed do eiusm oinc ididunt od tempor incididu ut labore et dolore magna aliqua.",
+        "location": "San Jose, California",
+        "image": "https://cdn.shopify.com/s/files/1/0009/0839/4551/products/CIR-CREW-001_a7753bad-98b1-4d6f-a276-145f27a7c335_1400x.png?v=1668527510",
+        "bg": "https://cdn.shopify.com/s/files/1/0009/0839/4551/products/CIR-CREW-001_a7753bad-98b1-4d6f-a276-145f27a7c335_1400x.png?v=1668527510"
+    }
+]

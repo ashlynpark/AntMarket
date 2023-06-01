@@ -1,11 +1,13 @@
-import {StyleSheet, Text, View, Dimensions, TouchableOpacity, SafeAreaView, ScrollView, Touchable, FlatList, Image} from 'react-native';
+import {StyleSheet, Text, ImageBackground, View, Dimensions, TouchableOpacity, SafeAreaView, ScrollView, Touchable, FlatList, Image} from 'react-native';
 import Screen from '../components/Screen';
 import Header from '../components/Header';
 import { FontAwesome5 } from '@expo/vector-icons';  
 import Carousel from 'react-native-reanimated-carousel';
+import { useNavigation } from '@react-navigation/native';
 
 
-const HomeScreen = () => {
+const HomeScreen = ({}) => {
+    const navigation = useNavigation();
     const width = Dimensions.get('window').width;
     const categories = [
                             {
@@ -34,6 +36,11 @@ const HomeScreen = () => {
                     <View>
                         <Tags tags={["furniture", "textbook", "vintage", "sofa", "shirt"]}/>
                     </View>
+                    <TouchableOpacity style={styles.postButt}  onPress={() => navigation.navigate('Swipe Deck')}>
+                        <View style={{ flex: 1, flexDirection:'row', alignItems: 'center', justifyContent: 'center', width: '100%', backgroundColor: 'rgba(0, 0, 0, .45)' }}>
+                            <Text style={styles.postButtLabel}> Swipe Deck</Text>
+                        </View>    
+                    </TouchableOpacity>
                     <View style={{margin: '5%'}}>
                         <Text style={styles.header}>
                             Browse Categories
@@ -191,7 +198,29 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontFamily: 'OpenSans_600SemiBold',
         alignSelf: 'center'
-    }
+    },
+    postButt: {
+        borderRadius: 10,
+        alignSelf: 'center',
+        flexDirection: 'row',
+        flex: 1,
+        width: '100%',
+        marginVertical: '5%',
+        height: 95,
+        backgroundColor: 'white',
+        shadowColor: 'black',
+        shadowOffset: {width: 0, height: 0},
+        shadowOpacity: 0.7,
+       alignItems: 'center',
+        justifyContent: 'center', 
+    },
+    postButtLabel: {
+        fontSize: 20,
+        fontFamily: 'OpenSans_600SemiBold',
+        alignSelf: 'center',
+        textAlign: 'center',
+        color: 'white'
+    },
 })
 
 export default HomeScreen;
