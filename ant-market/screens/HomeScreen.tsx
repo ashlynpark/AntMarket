@@ -37,7 +37,7 @@ const HomeScreen = ({}) => {
                     </View>
                     <TouchableOpacity style={styles.postButt}  onPress={() => navigation.navigate('Swipe Deck')}>
                         <View style={{ flex: 1, flexDirection:'row', alignItems: 'center', justifyContent: 'center', width: '100%', backgroundColor: 'rgba(0, 0, 0, .45)' }}>
-                            <Text style={styles.postButtLabel}> Create New Listing</Text>
+                            <Text style={styles.postButtLabel}> Swipe Deck</Text>
                         </View>    
                     </TouchableOpacity>
                     <View style={{margin: '5%'}}>

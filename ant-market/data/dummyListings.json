@@ -5,7 +5,7 @@
         "bio" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex",
         "location": "San Francisco, California",
         "image" : "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
-        "bg" : "https://images.unsplash.com/photo-1484291470158-b8f8d608850d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+        "bg" : "https://www.ikea.com/us/en/images/products/hattefjaell-office-chair-with-armrests-smidig-black__1019087_pe831296_s5.jpg"
 
     },
     {
@@ -14,7 +14,7 @@
         "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "location": "Houston, Texas",
         "image" : "https://static.hiphopdx.com/2021/03/210306-megan-thee-stallion-1200x675.jpg",
-        "bg" : "https://images.unsplash.com/photo-1464965911861-746a04b4bca6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+        "bg" : "https://i.etsystatic.com/26947746/r/il/bffa36/2992459840/il_fullxfull.2992459840_t9wa.jpg"
     },
     {
         "name": "books",
@@ -22,7 +22,7 @@
         "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "location": "San Francisco, California",
         "image" : "https://i.insider.com/5fc69b02037cbd00186132ed?width=700",
-        "bg" : "https://images.unsplash.com/photo-1434394354979-a235cd36269d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1451&q=80"
+        "bg" : "https://bdhs.wayne.k12.in.us/wp-content/uploads/2019/08/textbooks.jpg"
     },
     {
         "name": "lamp",
@@ -30,7 +30,7 @@
         "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "location": "New York City, New York",
         "image" : "https://images.unsplash.com/photo-1554727242-741c14fa561c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
-        "bg" : "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1441&q=80"
+        "bg" : "https://www.ikea.com/us/en/images/products/ranarp-work-lamp-off-white__0879626_pe654346_s5.jpg"
     },
     {
         "name": "air fryer",
@@ -38,7 +38,7 @@
         "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "location": "Chicago, Illinois",
         "image" : "https://images.unsplash.com/photo-1548142813-c348350df52b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=689&q=80",
-        "bg" : "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1544&q=80"
+        "bg" : "https://www.cnet.com/a/img/resize/e5abdd439ae36558ecb1ff155d49054b9adb833d/hub/2018/04/27/c9864b68-88d9-452c-8e51-2e65ef2a26a5/philips-xxl-air-fryer-1.jpg?auto=webp&fit=crop&height=1200&width=1200"
     },
     {
         "name": "backpack",
@@ -46,7 +46,7 @@
         "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "location": "Los Angeles, California",
         "image" : "https://hai.stanford.edu/sites/default/files/styles/person_big/public/2020-03/mayer_marissa_headshot3.jpg?itok=HtQy4g6n",
-        "bg" : "https://images.unsplash.com/photo-1618468355232-88a329df0182?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+        "bg" : "https://www.travelandleisure.com/thmb/0h8NWjHdtZ0aOBjeqUJWTxtMPnE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/tal-primary-most-stylish-travel-backpacks-jkim-0059.jpg-9159581ee6cc49599623f433026226b4.jpg"
     },
     {
         "name": "graphing calculator",
@@ -54,7 +54,7 @@
         "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "location": "Dallas, Texas",
         "image" : "https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
-        "bg" : "https://images.unsplash.com/photo-1476673160081-cf065607f449?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80"
+        "bg" : "https://i.ebayimg.com/images/g/KS8AAOSwqnJjjo7k/s-l1600.jpg"
     },
     {
         "name": "knife set",
@@ -62,7 +62,7 @@
         "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "location": "Miami, Florida",
         "image" : "https://pbs.twimg.com/profile_images/1110621726923120640/Cc41gOZL_400x400.jpg",
-        "bg" : "https://images.unsplash.com/photo-1617688319108-cb3bdc88f587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1335&q=80"
+        "bg" : "https://reviewed-com-res.cloudinary.com/image/fetch/s--mKs9rteB--/b_white,c_limit,cs_srgb,f_auto,fl_progressive.strip_profile,g_center,q_auto,w_1200/https://reviewed-production.s3.amazonaws.com/1585315284631/best-knife-sets-under-200.jpg"
     },
     {
         "name": "wardrobe",
@@ -70,7 +70,7 @@
         "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "location": "Houston, Texas",
         "image" : "https://static01.nyt.com/images/2019/09/09/opinion/09Hunter1/09Hunter1-superJumbo.jpg",
-        "bg" : "https://images.unsplash.com/photo-1509316785289-025f5b846b35?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80"
+        "bg" : "https://www.ikea.com/us/en/images/products/kleppstad-wardrobe-with-2-doors-white__0733323_pe748780_s5.jpg"
     },
     {
         "name": "shoes",
@@ -78,7 +78,7 @@
         "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "location": "Atlanta, Georgia",
         "image" : "https://images.unsplash.com/photo-1542596768-5d1d21f1cf98?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
-        "bg" : "https://images.unsplash.com/photo-1574786201468-574f3151871e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1168&q=80"
+        "bg" : "https://images.urbndata.com/is/image/FreePeople/78468865_010_m/?$a15-pdp-detail-shot$&fit=constrain&qlt=80&wid=640"
     },
     {
         "name": "sweatshirt",
@@ -86,6 +86,6 @@
         "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor piscing elit, sed do eiusm oinc ididunt od tempor incididu ut labore et dolore magna aliqua.",
         "location": "San Jose, California",
         "image" : "https://images.unsplash.com/photo-1600481453173-55f6a844a4ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=675&q=80",
-        "bg" : "https://images.unsplash.com/photo-1465101162946-4377e57745c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1478&q=80"
+        "bg" : "https://cdn.shopify.com/s/files/1/0009/0839/4551/products/CIR-CREW-001_a7753bad-98b1-4d6f-a276-145f27a7c335_1400x.png?v=1668527510"
     }
 ]
