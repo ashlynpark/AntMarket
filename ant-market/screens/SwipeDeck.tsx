@@ -51,7 +51,7 @@ const SwipeDeck = () => {
   return (
     <View>
         <SafeAreaView style={[styles.titleContainer, {marginBottom: '20%'}]}>
-            <Text style={styles.titleText}>Connect With Others</Text>
+            <Text style={styles.titleText}> Browse Free Items!</Text>
 
         </SafeAreaView>
       
@@ -64,7 +64,6 @@ const SwipeDeck = () => {
                     <ImageBackground style={styles.cardImage} source={{uri: profile.image}}>
                         <View style={styles.cardTextContainer}>
                             <Text style={styles.subheading}>{profile.name}</Text> 
-                            <Text style={[styles.infoText, {fontSize: 18}]}>{profile.price}</Text> 
                             <Text style={[styles.infoText, {fontSize: 18, color: '#E6AACE'}]}>{profile.location}</Text>                   
                         </View>
                     </ImageBackground>
@@ -85,7 +84,7 @@ const SwipeDeck = () => {
         </View>
         <View style={[styles.button,]}>
         <Ionicons name="arrow-redo" size={24} color="#ADACB5" />
-            <Text style={[styles.buttonText,]}>Connect</Text>
+            <Text style={[styles.buttonText,]}>Add to Cart</Text>
         </View>
       </View>
       {/* {lastDirection ? <Text style={styles.infoText} key={lastDirection}>You swiped {lastDirection}</Text> : <Text style={styles.infoText}>Swipe a card or press a button to get started!</Text>} */}
