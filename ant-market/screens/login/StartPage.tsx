@@ -3,7 +3,7 @@ import Screen from '../../components/Screen';
 import Header from '../../components/Header';
 import { useFonts, OpenSans_300Light } from '@expo-google-fonts/open-sans';
 import { FontAwesome5 } from '@expo/vector-icons';  
-import Onboarding from 'react-native-onboarding-swiper';
+//import Onboarding from 'react-native-onboarding-swiper';
 
 const StartPage = () => {
     let [fontsLoaded] = useFonts({
