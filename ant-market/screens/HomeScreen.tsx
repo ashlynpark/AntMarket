@@ -5,6 +5,7 @@ import { FontAwesome5 } from '@expo/vector-icons';
 import Carousel from 'react-native-reanimated-carousel';
 import { useNavigation } from '@react-navigation/native';
 
+const buttonBg = 'https://images.footballfanatics.com/uc-irvine-anteaters/uc-irvine-anteaters-custom-mascot-5-ast_ss10_p-101152583+u-sjlqljlyfh5j7h33lcpm+v-z7fmvxdc5ef0uytjnjc3.jpg?_hv=2&w=900';
 
 const HomeScreen = ({}) => {
     const navigation = useNavigation();
@@ -36,9 +37,11 @@ const HomeScreen = ({}) => {
                         <Tags tags={["furniture", "textbook", "vintage", "sofa", "shirt"]}/>
                     </View>
                     <TouchableOpacity style={styles.postButt}  onPress={() => navigation.navigate('Swipe Deck')}>
-                        <View style={{ flex: 1, flexDirection:'row', alignItems: 'center', justifyContent: 'center', width: '100%', backgroundColor: 'rgba(0, 0, 0, .45)' }}>
-                            <Text style={styles.postButtLabel}> Swipe Deck</Text>
-                        </View>    
+                        <ImageBackground source={require('../assets/anteaterplush_tiny.png')} resizeMode='repeat'>
+                            <View  style={{ flex: 1, flexDirection:'row', alignItems: 'center', justifyContent: 'center', width: '100%', backgroundColor: 'rgba(0, 0, 0, 0.4)'}}>
+                                <Text style={styles.postButtLabel}>Free Stuff Here!</Text>
+                            </View>
+                        </ImageBackground>    
                     </TouchableOpacity>
                     <View style={{margin: '5%'}}>
                         <Text style={styles.header}>
@@ -199,26 +202,29 @@ const styles = StyleSheet.create({
         alignSelf: 'center'
     },
     postButt: {
-        borderRadius: 10,
         alignSelf: 'center',
         flexDirection: 'row',
         flex: 1,
         width: '100%',
         marginVertical: '5%',
-        height: 95,
-        backgroundColor: 'white',
+        height: 110,
         shadowColor: 'black',
-        shadowOffset: {width: 0, height: 0},
+        shadowOffset: {width: 0, height:2},
         shadowOpacity: 0.7,
-       alignItems: 'center',
+        alignItems: 'center',
         justifyContent: 'center', 
+        marginBottom: '2%'
     },
     postButtLabel: {
-        fontSize: 20,
-        fontFamily: 'OpenSans_600SemiBold',
+        fontSize: 36,
+        fontFamily: 'OpenSans_700Bold_Italic',
         alignSelf: 'center',
         textAlign: 'center',
-        color: 'white'
+        color: 'white',
+        shadowColor: 'black',
+        shadowOffset: {width: 0, height: 2},
+        shadowOpacity: 0.4,
+        paddingHorizontal: '7%'
     },
 })
 
