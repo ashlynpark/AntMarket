@@ -26,7 +26,7 @@ interface Cost{
 }
 
 interface CostListProps{
-  costs: Cost[];
+  items: Item[];
 }
 
 const CheckoutScreen = () => {
@@ -38,16 +38,11 @@ const CheckoutScreen = () => {
         cost: 6.00,
         image: 'https://www.ikea.com/be/en/images/products/bottna-book-end-light-grey-green-anthracite__0611766_pe685559_s5.jpg?f=s'
       },
-      // {
-      //   name: 'Physics Book',
-      //   cost: 6.00,
-      //   image: 'https://r.wheelers.co/bk/small/978187/9781877530685.jpg'
-      // },
-      // {
-      //   name: 'Shower Rings',
-      //   cost: 0.00,
-      //   image: 'https://target.scene7.com/is/image/Target/GUEST_a1d97a24-cba9-40e9-b235-76f68c8454fd?wid=1000&hei=1000&qlt=80&fmt=webp'
-      // }
+      {
+        name: 'Physics Book',
+        cost: 8.00,
+        image: 'https://r.wheelers.co/bk/small/978187/9781877530685.jpg'
+      }
     ]
 
     const costs: Cost[] = [
@@ -101,7 +96,7 @@ const CheckoutScreen = () => {
                         <BorderNew/> 
                     </View>
                     <View style={{marginHorizontal: '5%'}}>  
-                        <CostList costs={costs}/>
+                        <CostList items={items}/>
                     </View>
                     <View style={{marginTop: '-3%'}}>
                         <BorderNew/> 
@@ -118,11 +113,8 @@ const CheckoutScreen = () => {
 }
 
 const CheckoutHeader = () => {
-    const navigation = useNavigation();
-    
     const handleBackPress = () => {
         // Handle the back button press event
-        // navigation.navigate(HomeScreen)
       };
     
       return (
@@ -293,21 +285,47 @@ const Border = () => {
     )
   }
 
-  const CostList: React.FC<CostListProps> = ({costs}) => {
-    return(
-      <View style={styles.summaryContainerMain}>
-        {costs.map((cost, index) => (
-          <View style={styles.costContainer} key={index}>
-            <View style={styles.leftContainer}>
-              <Text style={styles.regText}>{cost.name}</Text>
-            </View>
-            <View style={styles.rightContainer}>
-              <Text style={styles.cost}>${cost.cost.toFixed(2)}</Text>
-            </View>
-          </View>
-        ))}
+  const CostList: React.FC<CostListProps> = ({items}) => {
+  const taxRate = 0.0725; 
+
+  // Calculate total cost
+  const subtotal = items.reduce((total, item) => total + item.cost, 0);
+
+  // Calculate total tax
+  const totalTax = items.reduce((total, item) => total + (item.cost * taxRate), 0);
+
+  // Calculate total including tax
+  const total = subtotal + totalTax;
+
+  return (
+    <View style={styles.summaryContainerMain}>
+      
+      <View style={styles.costContainer}>
+        <View style={styles.leftContainer}>
+          <Text style={styles.regText}>Subtotal</Text>
+        </View>
+        <View style={styles.rightContainer}>
+          <Text style={styles.cost}>${subtotal.toFixed(2)}</Text>
+        </View>
       </View>
-    )
+      <View style={styles.costContainer}>
+        <View style={styles.leftContainer}>
+          <Text style={styles.regText}>Tax</Text>
+        </View>
+        <View style={styles.rightContainer}>
+          <Text style={styles.cost}>${totalTax.toFixed(2)}</Text>
+        </View>
+      </View>
+      <View style={styles.costContainer}>
+        <View style={styles.leftContainer}>
+          <Text style={styles.regText}>Total</Text>
+        </View>
+        <View style={styles.rightContainer}>
+          <Text style={styles.cost}>${total.toFixed(2)}</Text>
+        </View>
+      </View>
+    </View>
+  );
   }
   
   const PayOrder = () => {

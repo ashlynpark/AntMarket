@@ -6,6 +6,7 @@ import Carousel from 'react-native-reanimated-carousel';
 
 interface Item{
   name: string;
+  seller: string;
   unitPrice: string;
   quantity: number;
   cost: number;
@@ -14,7 +15,6 @@ interface Item{
 
 interface ItemCardProps{
   items: Item[];
-  title: string;
 }
 
 const CartScreen = () => {
@@ -23,10 +23,19 @@ const CartScreen = () => {
     const items: Item[] = [
       {
         name: 'IKEA Bookend',
+        seller: 'someguy888',
         unitPrice: '$3.00',
         quantity: 2,
         cost: 6.00,
         image: 'https://www.ikea.com/be/en/images/products/bottna-book-end-light-grey-green-anthracite__0611766_pe685559_s5.jpg?f=s'
+      },
+      {
+        name: 'Physics Book',
+        seller: 'yoyoyoy',
+        unitPrice: '$6.00',
+        quantity: 1,
+        cost: 8.00,
+        image: 'https://r.wheelers.co/bk/small/978187/9781877530685.jpg'
       }
     ]
 
@@ -39,8 +48,8 @@ const CartScreen = () => {
                 <View>
                     <CartHeader/>
                     <Border/>
-                    <View style={{margin: '5%'}}>
-                        <ItemCard items={items} title='Seller: someguy888' />
+                    <View style={{marginHorizontal: '5%', marginTop: '3%'}}>
+                        <ItemCard items={items} />
                     </View>
                 </View>
             </SafeAreaView>
@@ -81,56 +90,59 @@ const Border = () => {
       );
     };
 
-  const ItemCard: React.FC<ItemCardProps> = ({items, title}) => {
-    return (
-      <View style={styles.cardContainerMain}>
-         <Text style={[styles.header, {marginBottom: 5}]}>{title}</Text>
-      
-          {items.map((item, index) => (
-            <View key={index} style={styles.cardContainer}> 
-              <View style={styles.contentContainer}>
-                {/* <View style={styles.line} /> */}
-                <View style={styles.imageContainer}>
-                  <Image source={{ uri: item.image }} style={styles.image} />
-                  <View style={styles.buttonContainer}>
-                    <TouchableOpacity onPress={() => console.log('Edit pressed')}>
-                      <Text style={styles.editText}>EDIT</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity onPress={() => console.log('Delete pressed')}>
-                      <Text style={styles.delText}>DELETE</Text>
-                    </TouchableOpacity>
-                  </View>
-                </View>
-                <View style={styles.detailsContainer}>
-                  <Text style={styles.title}>{item.name}</Text>
-                  <Text style={styles.unitPrice}>Unit Price: {item.unitPrice}</Text>
-                  <Text style={styles.quantity}>Qty: {item.quantity}</Text>
+  const ItemCard: React.FC<ItemCardProps> = ({items}) => {
+  const taxRate = 0.0725; // Assuming 8% tax rate
+
+  return (
+    <View>
+      {items.map((item, index) => (
+        <View key={index}>
+          <Text style={[styles.header, { marginBottom: '2%' }]}>Seller: {item.seller}</Text>
+          <View style={styles.cardContainer}>
+            <View style={styles.contentContainer}>
+              <View style={styles.imageContainer}>
+                <Image source={{ uri: item.image }} style={styles.image} />
+                <View style={styles.buttonContainer}>
+                  <TouchableOpacity onPress={() => console.log('Edit pressed')}>
+                    <Text style={styles.editText}>EDIT</Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity onPress={() => console.log('Delete pressed')}>
+                    <Text style={styles.delText}>DELETE</Text>
+                  </TouchableOpacity>
                 </View>
               </View>
-              <View style={styles.priceContainer}>
-                <Text style={styles.price}>Price: ${item.cost.toFixed(2)}</Text>
+              <View style={styles.detailsContainer}>
+                <Text style={styles.title}>{item.name}</Text>
+                <Text style={styles.unitPrice}>Unit Price: {item.unitPrice}</Text>
+                <Text style={styles.quantity}>Qty: {item.quantity}</Text>
               </View>
             </View>
-          ))}
-          <View style={styles.sectionContainer}>
+            <View style={styles.priceContainer}>
+              <Text style={styles.price}>Price: ${item.cost.toFixed(2)}</Text>
+            </View>
+          </View>
+
+          <View style={[styles.sectionContainer, {marginBottom: '5%'}]}>
             <View style={styles.columnContainer}>
               <View style={styles.shippingSection}>
                 <Text style={styles.sectionTitle}>Shipping: $0.00</Text>
               </View>
               <View style={styles.taxSection}>
-                <Text style={styles.sectionTitle}>Tax: $0.93</Text>
+                <Text style={styles.sectionTitle}>Tax: ${(item.cost * taxRate).toFixed(2)}</Text>
               </View>
               <View style={styles.totalSection}>
-                <Text style={styles.sectionTitle}>Total: $6.93</Text>
+                <Text style={styles.sectionTitle}>Total: ${(item.cost + (item.cost * taxRate)).toFixed(2)}</Text>
               </View>
             </View>
             <TouchableOpacity style={styles.checkoutButton} onPress={() => console.log('Checkout pressed')}>
               <Text style={styles.checkoutButtonText}>CHECKOUT</Text>
             </TouchableOpacity>
           </View>
-      </View>
-    );
-  }
+        </View>
+      ))}
+    </View>
+  );
+}
 
 const styles = StyleSheet.create({
     container: {

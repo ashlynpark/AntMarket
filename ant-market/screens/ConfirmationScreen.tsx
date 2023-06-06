@@ -4,9 +4,66 @@ import Header from '../components/Header';
 import { FontAwesome5 } from '@expo/vector-icons';  
 import Carousel from 'react-native-reanimated-carousel';
 
+interface Item{
+  name: string;
+  cost: number;
+  image: string;
+}
+
+interface SummaryListProps{
+  items: Item[];
+  title: string;
+}
+
+interface Cost{
+  name: string;
+  cost: number;
+}
+
+interface CostListProps{
+  items: Item[];
+}
 
 const ConfirmationScreen = () => {
+    const items: Item[] = [
+      {
+        name: 'IKEA Bookend x2',
+        cost: 6.00,
+        image: 'https://www.ikea.com/be/en/images/products/bottna-book-end-light-grey-green-anthracite__0611766_pe685559_s5.jpg?f=s'
+      },
+      {
+        name: 'Physics Book',
+        cost: 8.00,
+        image: 'https://r.wheelers.co/bk/small/978187/9781877530685.jpg'
+      }
+    ]
+
+    const costs: Cost[] = [
+      {
+        name: 'Subtotal',
+        cost: 6.00
+      },
+      {
+        name: 'Tax',
+        cost: 0.93
+      },
+      {
+        name: 'Total',
+        cost: 6.93
+      }
+    ]
+
     const width = Dimensions.get('window').width;
+    const taxRate = 0.0725; 
+
+    // Calculate total cost
+    const subtotal = items.reduce((total, item) => total + item.cost, 0);
+
+    // Calculate total tax
+    const totalTax = items.reduce((total, item) => total + (item.cost * taxRate), 0);
+
+    // Calculate total including tax
+    const total = subtotal + totalTax;
     return(
         <Screen preset="scroll">
             <SafeAreaView>
@@ -16,7 +73,7 @@ const ConfirmationScreen = () => {
                   <View style={{margin: '5%'}}>
                     <Text style={styles.header}>Your Order Is Complete!</Text>
                     <CircleWithCheckmark />
-                    <Text style={styles.header1}>Total: $6.93</Text>
+                    <Text style={styles.header1}>Total: ${total.toFixed(2)}</Text>
                   </View>
                   <View>
                     <BorderNew />
