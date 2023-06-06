@@ -30,7 +30,7 @@ const TabNavigator = () => {
                             borderRadius: 30 / 2,
                             borderColor: '#FFFFFF',
                             borderWidth: 1}}>
-                            <Entypo name="home" size={20} color={focused ? 'blue' : 'black'} style={{position: "absolute", left: 30/2 - 11, top: 30/2 - 12}}/>
+                            <Entypo name="home" size={25} color={focused ? 'blue' : 'black'} style={{position: "absolute", left: 30/2 - 11, top: 30/2 - 12}}/>
                         </View>)},
                     tabBarLabel: "Home",
                 })}
@@ -40,36 +40,55 @@ const TabNavigator = () => {
                 component={CreateScreen}
                 options={{
                     headerShown: false,
-                    
+                    tabBarIcon: ({focused}) => {
+                    return(
+                        <View style={{
+                            width: 30,
+                            height: 30,
+                            borderRadius: 30 / 2,
+                            borderColor: '#FFFFFF',
+                            borderWidth: 1}}>
+                            <Entypo name="circle-with-plus" size={25} color={focused ? 'blue' : 'black'} style={{position: "absolute", left: 30/2 - 11, top: 30/2 - 12}}/>
+                        </View>)},
                     tabBarLabel: "Listings",
-                    tabBarLabelStyle: {
-                        color: 'red'
-                    }
+                    
                 }}
             />
             <Tab.Screen
                 name="Cart"
                 component={StartPage}
-                options={{
+                options={ () => ({
                     headerShown: false,
-                    
+                    tabBarIcon: ({focused}) => {
+                    return(
+                        <View style={{
+                            width: 30,
+                            height: 30,
+                            borderRadius: 30 / 2,
+                            borderColor: '#FFFFFF',
+                            borderWidth: 1}}>
+                            <Entypo name="shopping-cart" size={25} color={focused ? 'blue' : 'black'} style={{position: "absolute", left: 30/2 - 11, top: 30/2 - 12}}/>
+                        </View>)},
                     tabBarLabel: "Cart",
-                    tabBarLabelStyle: {
-                        color: 'red'
-                    }
-                }}
+                })}
             />
             <Tab.Screen
                 name="Profile"
                 component={ProfileScreen}
-                options={{
+                options={ () => ({
                     headerShown: false,
-                    
+                    tabBarIcon: ({focused}) => {
+                    return(
+                        <View style={{
+                            width: 30,
+                            height: 30,
+                            borderRadius: 30 / 2,
+                            borderColor: '#FFFFFF',
+                            borderWidth: 1}}>
+                            <Entypo name="user" size={25} color={focused ? 'blue' : 'black'} style={{position: "absolute", left: 30/2 - 11, top: 30/2 - 12}}/>
+                        </View>)},
                     tabBarLabel: "Profile",
-                    tabBarLabelStyle: {
-                        color: 'red'
-                    }
-                }}
+                })}
             />
             
         </Tab.Navigator>
