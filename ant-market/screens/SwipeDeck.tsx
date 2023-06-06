@@ -51,7 +51,7 @@ const SwipeDeck = () => {
   return (
     <View>
         <SafeAreaView style={[styles.titleContainer,]}>
-          <TouchableOpacity style={{flexDirection: 'row', flex:1, justifyContent:'flex-start', alignItems: 'flex-start', marginTop: '1%', marginLeft: '4%'}}>
+          <TouchableOpacity onPress={()=>{navigation.navigate('home')}} style={{flexDirection: 'row', flex:1, justifyContent:'flex-start', alignItems: 'flex-start', marginTop: '1%', marginLeft: '4%'}}>
             <Feather name="arrow-left-circle" size={30} color="white" />
           </TouchableOpacity>
           <View style={{flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginRight: '15%'}}>
