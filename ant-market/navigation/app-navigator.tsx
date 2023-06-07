@@ -4,8 +4,9 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { AntDesign, Entypo, MaterialCommunityIcons, Feather } from '@expo/vector-icons';
 import { View } from 'react-native';
 import TabNavigator from "./tab-navigator";
+import HomeScreen from '../screens/HomeScreen';
+import SearchScreen from '../screens/ListingsScreen';
 
-import ProfNavigator from "./prof-navigator";
 
 const Stack = createNativeStackNavigator()
 
