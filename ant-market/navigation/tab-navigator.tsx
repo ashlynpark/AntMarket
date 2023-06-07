@@ -4,14 +4,20 @@ import { View } from 'react-native';
 
 
 import HomeScreen from '../screens/HomeScreen';
+
+import ProfileScreen from '../screens/Profile/ProfileScreen';
 import CreateScreen from '../screens/ListingsScreen';
-import ProfileScreen from '../screens/ProfileScreen';
 import OnBord from "../screens/login/OnBoard";
 import SignIn from "../screens/login/SignIn";
 import StartPage from "../screens/login/StartPage";
+<<<<<<< HEAD
 import HomeNavigator from "./home-navigator";
 import { useState } from "react";
 import CheckoutNavigator from "./checkout-navigator";
+=======
+import ProfNavigator from "./prof-navigator";
+
+>>>>>>> 10e72ef87d788411872c3db63a811b6d2b808e25
 
 
 const Tab = createBottomTabNavigator();
@@ -76,8 +82,13 @@ const TabNavigator = () => {
             />
             <Tab.Screen
                 name="Profile"
+<<<<<<< HEAD
                 component={ProfileScreen}
                 options={ () => ({
+=======
+                component={ProfNavigator}
+                options={{
+>>>>>>> 10e72ef87d788411872c3db63a811b6d2b808e25
                     headerShown: false,
                     tabBarStyle: {backgroundColor: '#113125'},
                     tabBarIcon: ({focused}) => {
