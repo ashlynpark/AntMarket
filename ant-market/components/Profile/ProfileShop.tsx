@@ -1,13 +1,9 @@
 import {StyleSheet, Text, View, Modal, Button, TouchableOpacity, SafeAreaView, ImageBackground, ScrollView, Touchable, FlatList, Image} from 'react-native';
 import Screen from '../../components/Screen';
-import Header from '../../components/Header';
-import { FontAwesome5 } from '@expo/vector-icons';  
-import { MaterialIcons } from '@expo/vector-icons'; 
 import React, { useState } from 'react';
 import { IconButton } from '@react-native-material/core';
 import { AntDesign } from '@expo/vector-icons'; 
 import { LinearGradient } from "expo-linear-gradient";
-import Svg, {Circle} from 'react-native-svg';
 
 const bgImgCreate = 'https://images.unsplash.com/photo-1597668900045-b9283c0de174?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'
 
