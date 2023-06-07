@@ -1,7 +1,6 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import ProfileSaved from "../screens/Profile/ProfileSaved";
-import ProfileTabs from "../components/Profile/ProfileTabs";
 import ProfileMessages from "../screens/Profile/ProfileMessages";
 import ProfileScreen from "../screens/Profile/ProfileScreen";
 
@@ -9,20 +8,23 @@ const Stack = createNativeStackNavigator();
 
 const ProfNavigator = () => {
     return (
-    <Stack.Navigator>
-        <Stack.Screen name="ProfileScreen" 
+    <Stack.Navigator initialRouteName="ProfileScreen">
+        <Stack.Screen 
+            name="ProfileScreen" 
             component={ProfileScreen} 
             options={{
                 headerShown: false
             }}
         />
-        <Stack.Screen name="ProfileSaved" 
+        <Stack.Screen 
+            name="ProfileSaved" 
             component={ProfileSaved} 
             options={{
                 headerShown: false
             }} 
         />
-        <Stack.Screen name="ProfileMessages" 
+        <Stack.Screen 
+            name="ProfileMessages" 
             component={ProfileMessages}
             options={{
                 headerShown: false

@@ -19,13 +19,7 @@ const AppStack = () => {
                     headerShown: false
                 }}
             />
-            <Stack.Screen
-                name="ProfNav"
-                component={ProfNavigator}
-                options={{
-                    headerShown: false
-                }}
-            />
+            
         </Stack.Navigator>
 
 

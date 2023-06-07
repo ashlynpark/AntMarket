@@ -4,6 +4,7 @@ import Header from '../../components/Header';
 import ProfileHeader from '../../components/Profile/ProfileHeader';
 import { useFonts, OpenSans_300Light } from '@expo-google-fonts/open-sans';
 import ProfMessages from '../../components/Profile/ProfMessages';
+import ProfileTabs from '../../components/Profile/ProfileTabs';
 
 
 const ProfileMessages = () => {
@@ -12,6 +13,7 @@ const ProfileMessages = () => {
         <Screen preset="scroll">
             <Header/>
             <ProfileHeader/>
+            <ProfileTabs/>
             <SafeAreaView>
                 <ProfMessages/>
             </SafeAreaView>

@@ -18,7 +18,7 @@ const ProfileHeader = () => {
                     <Text style={styles.follow_header}>4 Following</Text>
                 </Text>
                 <Image style={styles.ratings} source={require("../../assets/ratings.png")}/>
-                <ProfileTabs/>
+            
             </SafeAreaView>
     )
 }

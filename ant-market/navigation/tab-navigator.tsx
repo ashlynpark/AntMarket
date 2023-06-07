@@ -9,6 +9,7 @@ import ProfileScreen from '../screens/Profile/ProfileScreen';
 import OnBord from "../screens/login/OnBoard";
 import SignIn from "../screens/login/SignIn";
 import StartPage from "../screens/login/StartPage";
+import ProfNavigator from "./prof-navigator";
 
 
 
@@ -60,7 +61,7 @@ const TabNavigator = () => {
             />
             <Tab.Screen
                 name="Profile"
-                component={ProfileScreen}
+                component={ProfNavigator}
                 options={{
                     headerShown: false,
                     
