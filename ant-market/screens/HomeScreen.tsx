@@ -62,10 +62,15 @@ const Search = () => {
     const [text, onChangeText] = useState('');
     const navigation = useNavigation();
 
+    const handleSearch = () => {
+        navigation.navigate('Search Results', text);
+        onChangeText(''); 
+      };
+
     const SearchButton = () => {
         return(
         
-            <TouchableOpacity onPress={() => {navigation.navigate('Search Results', text)}} style={[styles.buttonContainer, {backgroundColor: '#A6C48A'}]}>
+            <TouchableOpacity onPress={handleSearch} style={[styles.buttonContainer, {backgroundColor: '#A6C48A'}]}>
                 <FontAwesome5 name="search" size={22} color="white" />
             </TouchableOpacity> 
     
@@ -91,7 +96,7 @@ const Search = () => {
                             autoCapitalize='none'
                             placeholder='Search'
                             returnKeyType='search'
-                            onSubmitEditing={() => {navigation.navigate('Search Results', text)}} // Add onSubmitEditing prop to trigger search on keyboard search button press
+                            onSubmitEditing={handleSearch} // Add onSubmitEditing prop to trigger search on keyboard search button press
                             style={{fontFamily: 'OpenSans_300Light', fontSize: 16}}
                     /> 
                 </View>
