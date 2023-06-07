@@ -37,7 +37,7 @@ const TabNavigator = () => {
                             <Entypo name="home" size={25} color={focused ? 'white' : '#A6C48A'} style={{position: "absolute", left: 30/2 - 11, top: 30/2 - 10}}/>
                         </View>)},
                     tabBarLabel: "Home",
-                    tabBarLabelStyle: {fontSize: 12, fontFamily: 'OpenSans_400Regular'}
+                    tabBarLabelStyle: {fontSize: 12, fontFamily: 'OpenSans_500Medium'}
                 })}
             />
             <Tab.Screen
@@ -52,7 +52,7 @@ const TabNavigator = () => {
                             <Entypo name="circle-with-plus" size={25} color={focused ? 'white' : '#A6C48A'} style={{position: "absolute", left: 30/2 - 11, top: 30/2 - 10}}/>
                         </View>)},
                     tabBarLabel: "Listings",
-                    tabBarLabelStyle: {fontSize: 12, fontFamily: 'OpenSans_400Regular'}
+                    tabBarLabelStyle: {fontSize: 12, fontFamily: 'OpenSans_500Medium'}
                     
                 }}
             />
@@ -70,7 +70,7 @@ const TabNavigator = () => {
                             <Entypo name="shopping-cart" size={25} color={focused ? 'white' : '#A6C48A'} style={{position: "absolute", left: 30/2 - 11, top: 30/2 - 10}}/>
                         </View>)},
                     tabBarLabel: "Cart",
-                    tabBarLabelStyle: {fontSize: 12, fontFamily: 'OpenSans_400Regular'}
+                    tabBarLabelStyle: {fontSize: 12, fontFamily: 'OpenSans_500Medium'}
 
                 })}
             />
@@ -87,8 +87,8 @@ const TabNavigator = () => {
                             height: 30}}>
                             <Entypo name="user" size={25} color={focused ? 'white' : '#A6C48A'} style={{position: "absolute", left: 30/2 - 11, top: 30/2 - 10}}/>
                         </View>)},
-                    tabBarLabel: "Profile",
-                    tabBarLabelStyle: {fontSize: 12, fontFamily: 'OpenSans_400Regular'}
+                    tabBarLabel: "You",
+                    tabBarLabelStyle: {fontSize: 12, fontFamily: 'OpenSans_500Medium'}
 
                 })}
             />
