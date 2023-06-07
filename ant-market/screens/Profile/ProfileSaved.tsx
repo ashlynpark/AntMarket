@@ -3,6 +3,7 @@ import Screen from '../../components/Screen';
 import Header from '../../components/Header';
 import ProfileHeader from '../../components/Profile/ProfileHeader';
 import { useFonts, OpenSans_300Light } from '@expo-google-fonts/open-sans';
+import ProfSaved from '../../components/Profile/ProfSaved';
 
 
 const ProfileSaved = () => {
@@ -12,9 +13,7 @@ const ProfileSaved = () => {
             <Header/>
             <ProfileHeader/>
             <SafeAreaView>
-                <Text>
-                    Profile Saved
-                </Text>
+                <ProfSaved/>
             </SafeAreaView>
         </Screen>
 

@@ -15,13 +15,13 @@ const ProfileTabs = () => {
   return (
     <SafeAreaView style={styles.view}>
       <View style={styles.btnGroup}>
-        <TouchableOpacity style={[styles.btn, selection === 1 ? { backgroundColor: "white" } : null]} onPress={() => {setSelection(1); navigation.navigate('ProfileScreen');}}>
+        <TouchableOpacity style={[styles.btn, selection === 1 ? { backgroundColor: "white" } : null]} onPress={() => {setSelection(1); navigation.navigate('ProfNav', {screen: 'ProfileScreen'});}}>
           <Text style={[styles.btnText, selection === 1 ? { color: "green" } : null]}>{pages[0]}</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={[styles.btn, selection === 2 ? { backgroundColor: "white" } : null]} onPress={() => {setSelection(2);  navigation.navigate('ProfileSaved');}}>
+        <TouchableOpacity style={[styles.btn, selection === 2 ? { backgroundColor: "white" } : null]} onPress={() => {setSelection(2);  navigation.navigate('ProfNav', {screen: 'ProfileSaved'});}}>
           <Text style={[styles.btnText, selection === 2 ? { color: "green" } : null]}>{pages[1]}</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={[styles.btn, selection === 3 ? { backgroundColor: "white" } : null]} onPress={() => {setSelection(3); navigation.navigate('ProfileMessages')}}>
+        <TouchableOpacity style={[styles.btn, selection === 3 ? { backgroundColor: "white" } : null]} onPress={() => {setSelection(3); navigation.navigate('ProfNav', {screen: "ProfileMessages"})}}>
           <Text style={[styles.btnText, selection === 3 ? { color: "green" } : null]}>{pages[2]}</Text>
         </TouchableOpacity>
         </View>

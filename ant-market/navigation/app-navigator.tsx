@@ -5,13 +5,7 @@ import { AntDesign, Entypo, MaterialCommunityIcons, Feather } from '@expo/vector
 import { View } from 'react-native';
 import TabNavigator from "./tab-navigator";
 
-
-import HomeScreen from '../screens/HomeScreen';
-import SearchScreen from '../screens/CreateScreen';
-import ProfileSaved from "../screens/Profile/ProfileSaved";
-import ProfileTabs from "../components/Profile/ProfileTabs";
-import ProfileMessages from "../screens/Profile/ProfileMessages";
-import ProfileScreen from "../screens/Profile/ProfileScreen";
+import ProfNavigator from "./prof-navigator";
 
 const Stack = createNativeStackNavigator()
 
@@ -25,27 +19,9 @@ const AppStack = () => {
                     headerShown: false
                 }}
             />
-            <Stack.Screen name="ProfileScreen" 
-                component={ProfileScreen} 
-                options={{
-                    headerShown: false
-                }}
-            />
-            <Stack.Screen name="ProfileTabs" 
-                component={ProfileTabs} 
-                options={{
-                    headerShown: false
-                }}
-            />
-
-            <Stack.Screen name="ProfileSaved" 
-                component={ProfileSaved} 
-                options={{
-                    headerShown: false
-                }}
-            />
-            <Stack.Screen name="ProfileMessages" 
-                component={ProfileMessages}
+            <Stack.Screen
+                name="ProfNav"
+                component={ProfNavigator}
                 options={{
                     headerShown: false
                 }}
@@ -55,8 +31,6 @@ const AppStack = () => {
 
     )
 }
-
-const Stack2 = 
 
 export const AppNavigator = (props:any) => {
     return (
