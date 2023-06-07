@@ -65,9 +65,6 @@ const CartHeader = () => {
     
       return (
         <View style={styles.container}>
-        <TouchableOpacity onPress={handleBackPress}>
-          <FontAwesome5 name="chevron-left" size={24} color="black" />
-        </TouchableOpacity>
         <Text style={styles.headerText}>Cart</Text>
         <View style={styles.spacer} />
       </View>
@@ -155,7 +152,6 @@ const styles = StyleSheet.create({
     },
     headerText: {
       fontSize: 24,
-      fontWeight: 'bold',
       flex: 1,
       fontFamily: 'OpenSans_700Bold',
       textAlign: 'center',
@@ -236,8 +232,7 @@ const styles = StyleSheet.create({
       marginTop: '7%'
     },
     title: {
-      fontSize: 22,
-      fontWeight: 'bold',
+      fontSize: 18,
       fontFamily: 'OpenSans_700Bold',
     },
     unitPrice: {
@@ -291,7 +286,7 @@ const styles = StyleSheet.create({
      
     },
     sectionTitle: {
-      fontWeight: 'bold',
+      fontFamily: 'OpenSans_400Regular',
       fontSize: 16,
     },
     columnContainer: {

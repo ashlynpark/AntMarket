@@ -46,39 +46,45 @@ const messages = [
     {
         "username": "howard_g",
         "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "timestamp": "3 hours ago"
+        "timestamp": "3 hours ago",
+        "read" : false,
     },
     {
         "username": "beach_gurl29",
         "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "timestamp": "2 days ago"
+        "timestamp": "2 days ago",
+        "read" : true,
     },
     {
         "username": "i-eat-chairs",
         "message": "Hey is that armchair still available?",
-        "timestamp": "1 week ago"
+        "timestamp": "1 week ago",
+        "read" : false,
     },
     {
         "username": "timmyjimmy",
         "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "timestamp": "1 week ago"
+        "timestamp": "1 week ago",
+        "read" : true,
     },
     {
         "username": "peter1234",
         "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "timestamp": "2 weeks ago"
+        "timestamp": "2 weeks ago",
+        "read" : true,
     },
     {
         "username": "beter_the_eater",
         "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "timestamp": "January 1, 2023"
+        "timestamp": "January 1, 2023",
+        "read" : true,
     }
 ]
 
 const reviews = [
     {
         "username": "user_38942",
-        "title" : "Review title",
+        "title" : "Review title goes here",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "timestamp": "January 1, 2023",
         "rating" : 4
@@ -92,21 +98,21 @@ const reviews = [
     },
     {
         "username": "beter_the_eater",
-        "title" : "Review title",
+        "title" : "Really verbose review title in order to test the text wrapping",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "timestamp": "January 1, 2023",
         "rating" : 5
     },
     {
         "username": "timmyjimmy",
-        "title" : "Review title",
+        "title" : "Review title goes here",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "timestamp": "January 1, 2023",
         "rating" : 5
     },
     {
         "username": "peter1234",
-        "title" : "Review title",
+        "title" : "Review title goes here",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "timestamp": "January 1, 2023",
         "rating" : 5
@@ -258,8 +264,8 @@ const Message = (props: {message : any}) => {
                 <Image source={require('../assets/default-profile.jpeg')} style={styles.profilePic} />
             </View>
             <View style={{flex: 3, justifyContent: 'space-between', padding: '3%'}}>
-                <Text style={styles.messageUsername}>{props.message.username}</Text>
-                <Text style={styles.messageBody} numberOfLines={2} ellipsizeMode="tail">{props.message.message}</Text>
+                <Text style={styles.messageUsername}>{props.message.username}{props.message.read ? "" : <Text style={{color: '#678D58', fontFamily: 'OpenSans_800ExtraBold', fontSize: 20, alignSelf: 'center'}}>  •</Text>}</Text>
+                <Text style={props.message.read ? styles.messageBody : [styles.messageBody, {fontFamily: 'OpenSans_600SemiBold'}]} numberOfLines={2} ellipsizeMode="tail">{props.message.message}</Text>
                 <Text style={[styles.messageBody, {fontFamily: 'OpenSans_600SemiBold', fontSize: 12, textTransform: 'uppercase'}]}>{props.message.timestamp}</Text>
             </View>
         </TouchableOpacity>
@@ -272,8 +278,12 @@ const Review = (props: {review : any}) => {
     return(
         <TouchableOpacity style={styles.messageCard}>
             <View style={{flex: 3, justifyContent: 'space-between', padding: '3%'}}>
-                <Text style={styles.messageUsername}>{props.review.title}</Text>
-                <Text style={styles.messageUsername}>{props.review.username}</Text>
+                <View style={{flexDirection: 'row'}}>
+                    <Text style={styles.reviewTitle}>{props.review.title}</Text>
+                    <StarRating rating={props.review.rating} onChange={() => { }} starSize={20} color='#454745' starStyle={{ marginHorizontal: 0, marginTop: '3%'}} style={{flex: 1}}/> 
+                </View>
+                
+                <Text style={styles.reviewUsername}>by {props.review.username}</Text>
                 <Text style={styles.messageBody} numberOfLines={2} ellipsizeMode="tail">{props.review.review}</Text>
                 <Text style={[styles.messageBody, {fontFamily: 'OpenSans_600SemiBold', fontSize: 12, textTransform: 'uppercase'}]}>{props.review.timestamp}</Text>
             </View>
@@ -376,5 +386,17 @@ const styles = StyleSheet.create({
         fontFamily: 'OpenSans_400Regular',
         marginTop: '2%',
         color: '#454745'
+    },
+    reviewUsername: {
+        fontSize: 14,
+        fontFamily: 'OpenSans_500Medium',
+        alignSelf: 'flex-start',
+    },
+    reviewTitle: {
+        fontSize: 16,
+        fontFamily: 'OpenSans_600SemiBold',
+        alignSelf: 'flex-start',
+        flex: 2,
+        lineHeight: 18
     },
 })

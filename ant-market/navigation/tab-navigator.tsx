@@ -1,5 +1,5 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { AntDesign, Entypo, MaterialCommunityIcons, Feather } from '@expo/vector-icons';
+import { AntDesign, Entypo, Ionicons, MaterialCommunityIcons, Feather } from '@expo/vector-icons';
 import { View } from 'react-native';
 
 
@@ -85,7 +85,7 @@ const TabNavigator = () => {
                         <View style={{
                             width: 30,
                             height: 30}}>
-                            <Entypo name="user" size={25} color={focused ? 'white' : '#A6C48A'} style={{position: "absolute", left: 30/2 - 11, top: 30/2 - 10}}/>
+                            <Ionicons name="person" size={25} color={focused ? 'white' : '#A6C48A'} style={{position: "absolute", left: 30/2 - 11, top: 30/2 - 10}}/>
                         </View>)},
                     tabBarLabel: "You",
                     tabBarLabelStyle: {fontSize: 12, fontFamily: 'OpenSans_500Medium'}

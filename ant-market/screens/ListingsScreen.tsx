@@ -178,9 +178,13 @@ const PostButt = () => {
                                 </View>
     
                             </View>
-                            <View style={{flexDirection: 'row'}}>
-                                {/* CANCEL BUTTON GOES HERE */}
-                                {/* POST BUTTON GOES HERE */}
+                            <View style={{flexDirection: 'row', justifyContent: 'space-between', marginTop: '7%', marginHorizontal: '2%'}}>
+                                <TouchableOpacity onPress={() => {setPhotoURL(require('../assets/default_photo.jpeg')); setModalVisible(false)}} style={[styles.anotherButtonContainer, {backgroundColor: 'white', shadowOpacity: 0}]}>
+                                    <Text style={{padding: '3%', fontFamily: 'OpenSans_600SemiBold', fontSize: 18, color: '#454745',  alignSelf: 'center'}}>Cancel</Text>
+                                </TouchableOpacity>
+                                <TouchableOpacity onPress={() => {setPhotoURL(require('../assets/default_photo.jpeg')); setModalVisible(false)}} style={[styles.anotherButtonContainer, {}]}>
+                                    <MaterialIcons name="post-add" size={24} color="white" style={{alignSelf: 'center', paddingLeft: '3%',}}/><Text style={{paddingVertical: '4%', paddingRight: '4%', paddingLeft: '1%', fontFamily: 'OpenSans_700Bold', fontSize: 18, color: 'white', alignSelf: 'center'}}>Post Listing</Text>
+                                </TouchableOpacity>
                             </View>
                         </View>
                     </ScrollView>
@@ -376,7 +380,20 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontFamily: 'OpenSans_500Medium',
         marginBottom: '1%'
-    }
+    },
+    anotherButtonContainer:{
+        backgroundColor: '#4a7838',
+        borderRadius: 10,
+        shadowColor: '#A6C48A',
+        shadowOffset: {width: 0, height: 1},
+        shadowOpacity: 0.8,
+        height: 'auto',
+        width: 'auto',
+        marginTop: '7%',
+        alignSelf: 'center',
+        flexDirection: 'row',
+        marginBottom: '7%',
+    },
 })
 
 export default CreateScreen;
