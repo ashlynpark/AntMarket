@@ -11,43 +11,28 @@ const bgImgCreate = 'https://images.unsplash.com/photo-1597668900045-b9283c0de17
 const ProfileShop = () => {
     const listings = [
         {
-            "title":"Comfy Brown Sofa",
-            "seller":"anteaterLover",
-            "location":"Irvine, CA",
-            "description": "Gently used comfy brown sofa. Acquired from a furniture store in 2019. There is one coffee stain on the armrest but it is barely noticeable.",
-            "price": 130,
-            "images":[
-                {
-                    "imageURL":"brown-sofa.jpg"
-                }
-            ],
-            "saved":false
+            'title': 'Desk lamp, good condition, LED light',
+            'img': 'https://images.unsplash.com/photo-1623678624314-c3efb63fb2d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1933&q=80',
+            'seller' : 'peter',
+            'price' : 29.99
         },
         {
-            "title":"Swiveling Desk Chair",
-            "seller":"boba",
-            "location":"Irvine, CA",
-            "description": "Wheeeeeeeeeeeeeeee",
-            "price": 25,
-            "images":[
-                {
-                    "imageURL":"defaultphoto.png"
-                }
-            ],
-            "saved":false
+            'title' : 'Computer mouse (roller ball)',
+            'img': 'https://i.ebayimg.com/images/g/87MAAOSwq9NkTAti/s-l640.jpg',
+            'seller' : 'irvine-company-victim',
+            'price' : 0
         },
         {
-            "title":"Refurbished Macbook",
-            "seller":"anteaterLover",
-            "location":"Irvine, CA",
-            "description": "Refurbished laptop, works most of the time",
-            "price": 300,
-            "images":[
-                {
-                    "imageURL":"defaultphoto.png"
-                }
-            ],
-            "saved":false
+            'title': 'UCI hoodie, worn twice',
+            'img':'https://i.ebayimg.com/images/g/PkEAAOSwEAthru1l/s-l1600.jpg',
+            'seller' : 'petr_anteatr',
+            'price' : 13.00
+        },
+        {
+            'title': 'My Entire Petr Sticker Collection',
+            'img' : 'https://images.squarespace-cdn.com/content/v1/5b60d4fa70e802968763e7f5/1a57663c-9766-429c-b597-4ae31d4aff49/Screen+Shot+2023-01-26+at+5.53.11+PM.png?format=2500w',
+            'seller' : 'peter',
+            'price' : 42069.00
         }
     ]
     return(
@@ -55,10 +40,9 @@ const ProfileShop = () => {
             <View>
                 <SafeAreaView>
                     <View style={{marginTop: '2%', marginHorizontal: '5%'}}>
-                        <PostButt/>
-                        <Text style={styles.header}>
+                        {/* <Text style={styles.header}>
                             Your Listings
-                        </Text>
+                        </Text> */}
                     </View>
                     <View style={{marginTop: '2%', marginHorizontal: '5%'}}>
                         {listings.map((item, index) => {
@@ -74,49 +58,6 @@ const ProfileShop = () => {
     );
 }
 
-const PostButt = () => {
-    const [modalVisible, setModalVisible] = useState(false);
-
-    return(
-        <View>
-            <Modal
-                visible={modalVisible}
-                animationType="slide"
-                onRequestClose={() => setModalVisible(false)}
-                style={{justifyContent: 'center', backgroundColor: '#f2f2f2'}} 
-            >
-                <SafeAreaView style={{flex: 1, margin: '5%'}}>
-                    <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-                        <Text style={[styles.header, {margin: '2%'}]}>New Listing</Text> 
-                        <View style={{}}>
-                            <IconButton icon={props => <AntDesign name="closecircleo" size={24} color="#4a4a4a" />} onPress={() => {setModalVisible(false)}}/>
-                        </View>                       
-                    </View>
-
-                    <ScrollView>
-                        <View style={styles.newPostImgContainer}>
-                            <ImageBackground source={{uri: bgImgCreate}} style={styles.newPostImg}>
-                            <LinearGradient 
-                                colors={['rgba(0, 0, 0, 0.0)', 'rgba(0, 0, 0, 0.3)', 'rgba(0, 0, 0, 0.7)']} 
-                                style={{marginTop: '47%', height : '100%', width : '100%', alignSelf: 'center'}}
-                                locations={[0.05, 0.1, 0.3]}
-                            >
-                                <View style={{alignSelf: 'center'}}>
-                                    {/* TODO: FILL IN WITH LITTLE BABY CIRCLES */}
-                                </View>
-                            </LinearGradient>
-                            </ImageBackground>
-                        </View>
-                        <Text> Listing Title</Text>
-                    </ScrollView>
- 
-                </SafeAreaView>
-            </Modal>
-        </View>
-
-    )
-}
-
 const Listing = (props: {listing : any}) => {
     return(
         <TouchableOpacity style={styles.listingCard}>
@@ -124,7 +65,10 @@ const Listing = (props: {listing : any}) => {
                 <Image source={{uri: props.listing.img}} style={styles.listingImg} />
             </View>
             <View style={{flex: 1, justifyContent: 'space-between', padding: '3%'}}>
-                <Text style={styles.listingTitle} numberOfLines={3} ellipsizeMode="tail">{props.listing.title}</Text>
+                <View style={{flex: 1, flexDirection: 'row', justifyContent: 'space-between', padding: '3%'}}>
+                    <Text style={styles.listingTitle} numberOfLines={3} ellipsizeMode="tail">{props.listing.title}</Text>
+                    <Image source={require("../../assets/unselected_saved.png")} style={styles.saved} />
+                </View>
                 <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
                     <Text style={styles.listingPrice}>${props.listing.price}</Text>
                     <Text style={[styles.listingPrice, {color: 'black'}]}>View {'>'}</Text>
@@ -139,25 +83,6 @@ export default ProfileShop;
 
 
 const styles = StyleSheet.create({
-    searchBarContainer: {
-        marginTop: '5%',
-        marginBottom: '5%',
-        marginLeft: '4%',
-        marginRight: '3%',
-        width: "77%",
-        shadowColor: 'black',
-        shadowOffset: {
-            width: 0,
-            height: 2,
-        },
-        shadowOpacity: 0.2,
-        shadowRadius: 4,
-        elevation: 5,
-        borderRadius: 7,
-        backgroundColor: 'white',
-        flexDirection: 'row',
-        alignItems: 'center'
-    },
     defaultFont: {
         fontFamily: 'OpenSans_300Light'
     },
@@ -189,35 +114,6 @@ const styles = StyleSheet.create({
         fontFamily: 'OpenSans_700Bold',
         color: '#113125'
     },
-    postButt: {
-        borderRadius: 10,
-        alignSelf: 'center',
-        flexDirection: 'row',
-        flex: 1,
-        width: '100%',
-        marginVertical: '5%',
-        height: 95,
-        backgroundColor: 'white',
-        shadowColor: 'black',
-        shadowOffset: {width: 0, height: 0},
-        shadowOpacity: 0.7,
-       alignItems: 'center',
-        justifyContent: 'center', 
-    },
-    postButtLabel: {
-        fontSize: 20,
-        fontFamily: 'OpenSans_600SemiBold',
-        alignSelf: 'center',
-        textAlign: 'center',
-        color: 'white'
-    },
-    postButtImg: {
-        borderRadius: 10,
-        height: '100%',
-        width: '100%',
-        overflow: 'hidden',
-        resizeMode: 'cover'
-    },
     listingCard: {
         borderRadius: 10,
         alignSelf: 'center',
@@ -238,6 +134,13 @@ const styles = StyleSheet.create({
         overflow: 'hidden',
         resizeMode: 'cover'
 
+    },
+    saved: {
+        height: '50%',
+        width: '12%',
+        alignSelf: 'flex-start',
+        marginTop: '3%',
+        marginRight: '3%'
     },
     listingTitle: {
         fontSize: 16,
