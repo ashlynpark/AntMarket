@@ -91,6 +91,7 @@ const Search = () => {
                             autoCapitalize='none'
                             placeholder='Search'
                             returnKeyType='search'
+                            onSubmitEditing={() => {navigation.navigate('Search Results', text)}} // Add onSubmitEditing prop to trigger search on keyboard search button press
                             style={{fontFamily: 'OpenSans_300Light', fontSize: 16}}
                     /> 
                 </View>
