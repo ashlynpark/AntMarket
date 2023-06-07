@@ -11,7 +11,7 @@ import SignIn from "../screens/login/SignIn";
 import StartPage from "../screens/login/StartPage";
 import HomeNavigator from "./home-navigator";
 import { useState } from "react";
-
+import CheckoutNavigator from "./checkout-navigator";
 
 
 const Tab = createBottomTabNavigator();
@@ -58,7 +58,7 @@ const TabNavigator = () => {
             />
             <Tab.Screen
                 name="Cart"
-                component={HomeScreen}
+                component={CheckoutNavigator}
                 options={ () => ({
                     headerShown: false,
                     tabBarStyle: {backgroundColor: '#113125'},
