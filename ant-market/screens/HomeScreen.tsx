@@ -1,9 +1,10 @@
-import {StyleSheet, Text, ImageBackground, View, Dimensions, TouchableOpacity, SafeAreaView, ScrollView, Touchable, FlatList, Image} from 'react-native';
+import {StyleSheet, Text, TextInput, ImageBackground, View, Dimensions, TouchableOpacity, SafeAreaView, ScrollView, Touchable, FlatList, Image} from 'react-native';
 import Screen from '../components/Screen';
 import Header from '../components/Header';
 import { FontAwesome5 } from '@expo/vector-icons';  
 import Carousel from 'react-native-reanimated-carousel';
 import { useNavigation } from '@react-navigation/native';
+import { useState } from 'react';
 
 const buttonBg = 'https://images.footballfanatics.com/uc-irvine-anteaters/uc-irvine-anteaters-custom-mascot-5-ast_ss10_p-101152583+u-sjlqljlyfh5j7h33lcpm+v-z7fmvxdc5ef0uytjnjc3.jpg?_hv=2&w=900';
 
@@ -58,12 +59,15 @@ const HomeScreen = ({}) => {
 }
 
 const Search = () => {
+    const [text, onChangeText] = useState('');
+    const navigation = useNavigation();
+
     const SearchButton = () => {
         return(
         
-            <View style={[styles.buttonContainer, {backgroundColor: '#A6C48A'}]}>
+            <TouchableOpacity onPress={() => {navigation.navigate('Search Results', text)}} style={[styles.buttonContainer, {backgroundColor: '#A6C48A'}]}>
                 <FontAwesome5 name="search" size={22} color="white" />
-            </View> 
+            </TouchableOpacity> 
     
         )
     };
@@ -81,7 +85,14 @@ const Search = () => {
         <View style={{flexDirection: 'row', flex: 1}}>
             <View style={styles.searchBarContainer}>
                 <View style={{flex: 5, padding: '2%'}}>
-                    <Text style={[styles.defaultFont , {fontSize: 15, color: 'black'}]}>Search</Text>
+                    <TextInput
+                            onChangeText={onChangeText}
+                            value={text}
+                            autoCapitalize='none'
+                            placeholder='Search'
+                            returnKeyType='search'
+                            style={{fontFamily: 'OpenSans_300Light', fontSize: 16}}
+                    /> 
                 </View>
                 <SearchButton/>
             </View>
@@ -107,11 +118,12 @@ const Tags = (props: {tags:string[]}) =>{
 }
 
 const CategoryButtons = (props: {categories:any[]}) => {
+    const navigation = useNavigation()
     return(
         <View style={{flex: 1}}>
             {props.categories.map((item, index) => { 
                 return(
-                    <TouchableOpacity key={index} style={styles.catButt} onPress={() => {console.log(item.name)}}>
+                    <TouchableOpacity key={index} style={styles.catButt} onPress={() => {navigation.navigate('Search Results2')}}>
                         <View style={{flex: 1}}>
                             <Image source={{uri: item.img}} style={styles.catButtImg} />
                         </View>

@@ -47,12 +47,11 @@ const soldlistings = [
 
 
 const CreateScreen = () => {
-
     return(
         <ScrollView contentContainerStyle={{flex: 1}}>
                 <Header/>
                 <PostButt/>
-                <View style={{marginTop: '2%', marginHorizontal: '5%'}}>
+                <View style={{marginTop: '4%', marginHorizontal: '5%'}}>
                     <Text style={styles.header}>
                         Your Listings
                     </Text>
@@ -88,7 +87,7 @@ const CreateScreen = () => {
 
 const PostButt = () => {
     const [modalVisible, setModalVisible] = useState(false);
-
+    const [photoURL, setPhotoURL] = useState(require('../assets/default_photo.jpeg'))
 
     return(
         <View>
@@ -104,26 +103,26 @@ const PostButt = () => {
             <Modal
                 visible={modalVisible}
                 animationType="slide"
-                onRequestClose={() => setModalVisible(false)}
+                onRequestClose={() => {setPhotoURL(require('../assets/default_photo.jpeg')); setModalVisible(false)}}
                 style={{justifyContent: 'center', backgroundColor: '#f2f2f2'}} 
             >
                 <SafeAreaView style={{flex: 1, margin: '5%'}}>
                     <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
                         <Text style={[styles.header, {margin: '2%'}]}>New Listing</Text> 
                         <View style={{}}>
-                            <IconButton icon={props => <AntDesign name="closecircleo" size={24} color="#4a4a4a" />} onPress={() => {setModalVisible(false)}}/>
+                            <IconButton icon={props => <AntDesign name="closecircleo" size={24} color="#4a4a4a" />} onPress={() => {setPhotoURL(require('../assets/default_photo.jpeg')); setModalVisible(false)}}/>
                         </View>                       
                     </View>
 
                     <ScrollView>
                         <View style={styles.newPostImgContainer}>
-                            <Image source={require('../assets/default_photo.jpeg')} style={styles.newPostImg}/>
+                            <Image source={photoURL} style={styles.newPostImg}/>
                         </View>
                         <View style={{flexDirection: 'row'}}>
-                            <TouchableOpacity style={{flex: 1,marginLeft: '9%', marginRight: '5%', borderRadius: 10, height: '50%', backgroundColor: 'white', borderColor: '#678D58', borderWidth: 2, justifyContent:'center', shadowColor: 'black', shadowOffset: {width: 0, height: 2}, shadowOpacity: 0.5}}>
+                            <TouchableOpacity onPress={()=>setPhotoURL({uri: 'https://i.etsystatic.com/12021168/r/il/57ad51/3650822946/il_1588xN.3650822946_nj7j.jpg'})} style={{flex: 1,marginLeft: '9%', marginRight: '5%', borderRadius: 10, height: '50%', backgroundColor: 'white', borderColor: '#678D58', borderWidth: 2, justifyContent:'center', shadowColor: 'black', shadowOffset: {width: 0, height: 2}, shadowOpacity: 0.5}}>
                                 <Text style={{color: '#678D58', fontFamily: 'OpenSans_600SemiBold', fontSize: 16, alignSelf: 'center'}}>Take Photo</Text>
                             </TouchableOpacity>
-                            <TouchableOpacity style={{paddingVertical: 2,flex: 1,marginRight: '9%',  marginLeft: '5%', borderRadius: 10, height: '50%', borderColor: '#678D58', borderWidth: 2,justifyContent:'center', backgroundColor: 'white', shadowColor: 'black', shadowOffset: {width: 0, height: 2}, shadowOpacity: 0.5}}>
+                            <TouchableOpacity onPress={()=>setPhotoURL({uri: 'https://i.etsystatic.com/12021168/r/il/57ad51/3650822946/il_1588xN.3650822946_nj7j.jpg'})} style={{paddingVertical: 2,flex: 1,marginRight: '9%',  marginLeft: '5%', borderRadius: 10, height: '50%', borderColor: '#678D58', borderWidth: 2,justifyContent:'center', backgroundColor: 'white', shadowColor: 'black', shadowOffset: {width: 0, height: 2}, shadowOpacity: 0.5}}>
                                 <Text style={{width: '80%', color: '#678D58', fontFamily: 'OpenSans_600SemiBold', fontSize: 16, textAlign: 'center', alignSelf: 'center'}}>Upload</Text>
                             </TouchableOpacity>
                             

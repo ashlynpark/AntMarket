@@ -10,29 +10,34 @@ import OnBord from "../screens/login/OnBoard";
 import SignIn from "../screens/login/SignIn";
 import StartPage from "../screens/login/StartPage";
 import HomeNavigator from "./home-navigator";
+import { useState } from "react";
 
 
 
 const Tab = createBottomTabNavigator();
+
 const TabNavigator = () => {
     return (
-        <Tab.Navigator>
+        <Tab.Navigator
+        screenOptions={({ route }) => ({
+            tabBarActiveTintColor: 'white',
+            tabBarInactiveTintColor: '#A6C48A',
+          })}
+        >
+            
             <Tab.Screen
                 name="Home"
                 component={HomeNavigator}
                 options={ () => ({
                     headerShown: false,
+                    tabBarStyle: {backgroundColor: '#113125'},
                     tabBarIcon: ({focused}) => {
                     return(
-                        <View style={{
-                            width: 30,
-                            height: 30,
-                            borderRadius: 30 / 2,
-                            borderColor: '#FFFFFF',
-                            borderWidth: 1}}>
-                            <Entypo name="home" size={25} color={focused ? 'blue' : 'black'} style={{position: "absolute", left: 30/2 - 11, top: 30/2 - 12}}/>
+                        <View style={{width: 30, height: 30}}>
+                            <Entypo name="home" size={25} color={focused ? 'white' : '#A6C48A'} style={{position: "absolute", left: 30/2 - 11, top: 30/2 - 10}}/>
                         </View>)},
                     tabBarLabel: "Home",
+                    tabBarLabelStyle: {fontSize: 12, fontFamily: 'OpenSans_400Regular'}
                 })}
             />
             <Tab.Screen
@@ -40,36 +45,33 @@ const TabNavigator = () => {
                 component={CreateScreen}
                 options={{
                     headerShown: false,
+                    tabBarStyle: {backgroundColor: '#113125'},
                     tabBarIcon: ({focused}) => {
                     return(
-                        <View style={{
-                            width: 30,
-                            height: 30,
-                            borderRadius: 30 / 2,
-                            borderColor: '#FFFFFF',
-                            borderWidth: 1}}>
-                            <Entypo name="circle-with-plus" size={25} color={focused ? 'blue' : 'black'} style={{position: "absolute", left: 30/2 - 11, top: 30/2 - 12}}/>
+                        <View style={{ width: 30, height: 30}}>
+                            <Entypo name="circle-with-plus" size={25} color={focused ? 'white' : '#A6C48A'} style={{position: "absolute", left: 30/2 - 11, top: 30/2 - 10}}/>
                         </View>)},
                     tabBarLabel: "Listings",
+                    tabBarLabelStyle: {fontSize: 12, fontFamily: 'OpenSans_400Regular'}
                     
                 }}
             />
             <Tab.Screen
                 name="Cart"
-                component={StartPage}
+                component={HomeScreen}
                 options={ () => ({
                     headerShown: false,
+                    tabBarStyle: {backgroundColor: '#113125'},
                     tabBarIcon: ({focused}) => {
                     return(
                         <View style={{
                             width: 30,
-                            height: 30,
-                            borderRadius: 30 / 2,
-                            borderColor: '#FFFFFF',
-                            borderWidth: 1}}>
-                            <Entypo name="shopping-cart" size={25} color={focused ? 'blue' : 'black'} style={{position: "absolute", left: 30/2 - 11, top: 30/2 - 12}}/>
+                            height: 30}}>
+                            <Entypo name="shopping-cart" size={25} color={focused ? 'white' : '#A6C48A'} style={{position: "absolute", left: 30/2 - 11, top: 30/2 - 10}}/>
                         </View>)},
                     tabBarLabel: "Cart",
+                    tabBarLabelStyle: {fontSize: 12, fontFamily: 'OpenSans_400Regular'}
+
                 })}
             />
             <Tab.Screen
@@ -77,17 +79,17 @@ const TabNavigator = () => {
                 component={ProfileScreen}
                 options={ () => ({
                     headerShown: false,
+                    tabBarStyle: {backgroundColor: '#113125'},
                     tabBarIcon: ({focused}) => {
                     return(
                         <View style={{
                             width: 30,
-                            height: 30,
-                            borderRadius: 30 / 2,
-                            borderColor: '#FFFFFF',
-                            borderWidth: 1}}>
-                            <Entypo name="user" size={25} color={focused ? 'blue' : 'black'} style={{position: "absolute", left: 30/2 - 11, top: 30/2 - 12}}/>
+                            height: 30}}>
+                            <Entypo name="user" size={25} color={focused ? 'white' : '#A6C48A'} style={{position: "absolute", left: 30/2 - 11, top: 30/2 - 10}}/>
                         </View>)},
                     tabBarLabel: "Profile",
+                    tabBarLabelStyle: {fontSize: 12, fontFamily: 'OpenSans_400Regular'}
+
                 })}
             />
             
