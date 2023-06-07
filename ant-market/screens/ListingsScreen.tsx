@@ -3,7 +3,7 @@ import Screen from '../components/Screen';
 import Header from '../components/Header';
 import { FontAwesome5 } from '@expo/vector-icons';  
 import { MaterialIcons } from '@expo/vector-icons'; 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { IconButton } from '@react-native-material/core';
 import { AntDesign } from '@expo/vector-icons'; 
 import Svg, {Circle} from 'react-native-svg';
@@ -89,6 +89,7 @@ const CreateScreen = () => {
 const PostButt = () => {
     const [modalVisible, setModalVisible] = useState(false);
 
+
     return(
         <View>
             <TouchableOpacity style={styles.postButt}  onPress={() => setModalVisible(true)}>
@@ -119,12 +120,12 @@ const PostButt = () => {
                             <Image source={require('../assets/default_photo.jpeg')} style={styles.newPostImg}/>
                         </View>
                         <View style={{flexDirection: 'row'}}>
-                            <View style={{flex: 1,marginLeft: '9%', marginRight: '5%', borderRadius: 10, height: '50%', backgroundColor: 'white', borderColor: '#678D58', borderWidth: 2, justifyContent:'center', shadowColor: 'black', shadowOffset: {width: 0, height: 2}, shadowOpacity: 0.5}}>
+                            <TouchableOpacity style={{flex: 1,marginLeft: '9%', marginRight: '5%', borderRadius: 10, height: '50%', backgroundColor: 'white', borderColor: '#678D58', borderWidth: 2, justifyContent:'center', shadowColor: 'black', shadowOffset: {width: 0, height: 2}, shadowOpacity: 0.5}}>
                                 <Text style={{color: '#678D58', fontFamily: 'OpenSans_600SemiBold', fontSize: 16, alignSelf: 'center'}}>Take Photo</Text>
-                            </View>
-                            <View style={{paddingVertical: 2,flex: 1,marginRight: '9%',  marginLeft: '5%', borderRadius: 10, height: '50%', borderColor: '#678D58', borderWidth: 2,justifyContent:'center', backgroundColor: 'white', shadowColor: 'black', shadowOffset: {width: 0, height: 2}, shadowOpacity: 0.5}}>
+                            </TouchableOpacity>
+                            <TouchableOpacity style={{paddingVertical: 2,flex: 1,marginRight: '9%',  marginLeft: '5%', borderRadius: 10, height: '50%', borderColor: '#678D58', borderWidth: 2,justifyContent:'center', backgroundColor: 'white', shadowColor: 'black', shadowOffset: {width: 0, height: 2}, shadowOpacity: 0.5}}>
                                 <Text style={{width: '80%', color: '#678D58', fontFamily: 'OpenSans_600SemiBold', fontSize: 16, textAlign: 'center', alignSelf: 'center'}}>Upload</Text>
-                            </View>
+                            </TouchableOpacity>
                             
 
                         </View>
