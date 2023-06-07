@@ -1,20 +1,13 @@
 import {StyleSheet, Text, View, TouchableOpacity, SafeAreaView, ScrollView, Touchable, FlatList, TextInput, Image} from 'react-native';
 import Screen from '../../components/Screen';
 import Header from '../../components/Header';
-import { useFonts, OpenSans_300Light } from '@expo-google-fonts/open-sans';
 import Button from '../../components/Button';
 import React from 'react';
 import { AntDesign, Ionicons, Entypo, MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons';
 
 
 const SignIn = () => {
-    let [fontsLoaded] = useFonts({
-        OpenSans_300Light,
-    });
-    
-    if (!fontsLoaded) {
-        return null;
-    }
+
     const TextInputExample = () => {
         const [text, onChangeText] = React.useState('Useless Text');
         const [number, onChangeNumber] = React.useState('');

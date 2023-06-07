@@ -1,18 +1,11 @@
 import {StyleSheet, Text, View, TouchableOpacity, SafeAreaView, ScrollView, Touchable, FlatList, Image} from 'react-native';
 import Screen from '../../components/Screen';
 import Header from '../../components/Header';
-import { useFonts, OpenSans_300Light } from '@expo-google-fonts/open-sans';
 import { FontAwesome5 } from '@expo/vector-icons';  
 //import Onboarding from 'react-native-onboarding-swiper';
 
 const StartPage = () => {
-    let [fontsLoaded] = useFonts({
-        OpenSans_300Light,
-    });
-    
-    if (!fontsLoaded) {
-        return null;
-    }
+
 
     return(
         <Screen preset="scroll" style={{backgroundColor: '#678D58'}}>

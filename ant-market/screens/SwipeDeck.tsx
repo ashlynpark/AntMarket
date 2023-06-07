@@ -3,7 +3,7 @@ import { ImageBackground, Text, View, SafeAreaView, Button, StyleSheet, Touchabl
 import TinderCard from 'react-tinder-card';
 import dummyListings from '../data/dummyListings.json';
 import Screen from '../components/Screen';
-import { Ionicons } from '@expo/vector-icons'; 
+import { Ionicons, Feather } from '@expo/vector-icons'; 
 import { useNavigation } from '@react-navigation/native';
 
 const db = dummyListings;
@@ -41,34 +41,39 @@ const SwipeDeck = () => {
 
     const navigation = useNavigation();
 
-    // const goToProfile = (profile) => {
-    //     const data = profile;
-    //     console.log('profile')
+    // const goToProfile = (listing) => {
+    //     const data = listing;
+    //     console.log('listing')
     //     navigation.navigate('userProfile', data);
     // };
   
 
   return (
     <View>
-        <SafeAreaView style={[styles.titleContainer, {marginBottom: '20%'}]}>
-            <Text style={styles.titleText}> Browse Free Items!</Text>
-
+        <SafeAreaView style={[styles.titleContainer,]}>
+          <TouchableOpacity onPress={()=>{navigation.navigate('home')}} style={{flexDirection: 'row', flex:1, justifyContent:'flex-start', alignItems: 'flex-start', marginTop: '1%', marginLeft: '4%'}}>
+            <Feather name="arrow-left-circle" size={30} color="white" />
+          </TouchableOpacity>
+          <View style={{flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginRight: '15%'}}>
+           <Text style={styles.titleText}>Browse Free Items</Text>
+          </View>
         </SafeAreaView>
       
       <View style={styles.cardContainer}>
         
-        {characters.map((profile, index) => 
-            // <TouchableOpacity key={profile.name}  onPress={() => {goToProfile(profile)}}>
-                <TinderCard key={profile.name} onSwipe={(dir) => swiped(dir, profile.name)} onCardLeftScreen={() => outOfFrame(profile.name)} >
+        {characters.map((listing, index) => 
+            // <TouchableOpacity key={listing.name}  onPress={() => {goToProfile(listing)}}>
+                <TinderCard key={listing.name} onSwipe={(dir) => swiped(dir, listing.name)} onCardLeftScreen={() => outOfFrame(listing.name)} >
                     <View style={[styles.card, ]}>
-                    <ImageBackground style={styles.cardImage} source={{uri: profile.image}}>
+                    <ImageBackground style={styles.cardImage} source={{uri: listing.image}}>
                         <View style={styles.cardTextContainer}>
-                            <Text style={styles.subheading}>{profile.name}</Text> 
-                            <Text style={[styles.infoText, {fontSize: 18, color: '#E6AACE'}]}>{profile.location}</Text>                   
+                            <Text style={styles.subheading}>{listing.name}</Text> 
+                            <Text style={[styles.infoText, {marginLeft: '6%', fontSize: 17, color: '#ffffff'}]}><Ionicons name="person-circle-sharp" size={18} color="#cdd4d1" /> {listing.seller}</Text>                  
+                            <Text style={[styles.infoText, {fontSize: 17,lineHeight: 30, color: '#cdd4d1'}]}>{listing.location}</Text>
                         </View>
                     </ImageBackground>
                     <TouchableOpacity style={{}} onPress={() => {}}>
-                        <Text style={[styles.infoText, {fontSize: 18, marginVertical: '5%'}]} numberOfLines={5} ellipsizeMode="tail">{profile.bio}</Text>
+                        <Text style={[styles.infoText, {fontSize: 18, marginVertical: '5%'}]} numberOfLines={3} ellipsizeMode="tail">{listing.bio}</Text>
                     </TouchableOpacity>
                     </View>
                 </TinderCard>
@@ -108,9 +113,9 @@ const styles = StyleSheet.create({
     },
     card: {
         position: 'absolute',
-        backgroundColor: '#2D3142',
+        backgroundColor: '#A6C48A',
         width: '100%',
-        height: 550,
+        height: 500,
         shadowColor: 'black',
         shadowOpacity: 0.1,
         shadowOffset: {width: 0, height: 1},
@@ -118,15 +123,15 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         resizeMode: 'cover',
         marginHorizontal: '2%',
-        marginTop:'-15%',
-        paddingBottom: '50%',
+        marginTop: '15%',
+        paddingBottom: '30%',
         padding: '4%',
 
     },
     cardTextContainer: {
         marginTop: '80%',
         flex: 1,
-        backgroundColor: 'rgba(45, 49, 66, 0.7)',
+        backgroundColor: 'rgba(17, 49, 37, 0.7)',
         width: '100%',
         height: '100%',
         paddingHorizontal: '3%',
@@ -145,7 +150,7 @@ const styles = StyleSheet.create({
     button: {
         marginHorizontal: '10%',
         borderRadius: 5,
-        marginTop: '-8%',
+        marginTop: '13%',
         alignItems: 'center',
 
     },
@@ -160,18 +165,20 @@ const styles = StyleSheet.create({
       fontSize: 20,
       fontFamily: 'OpenSans_500Medium',
       marginHorizontal: '7%',
-      color: '#EAE8FF',
+      color: '#113125',
      
     },
     titleContainer: {
-        backgroundColor: '#E6AACE',
+        backgroundColor: '#678D58',
+        flexDirection: 'row',
+        justifyContent: 'center',
     },
     titleText: {
-        fontSize: 30,
-        color: '#2D3142',
-        fontFamily: 'OpenSans_700Bold',
+        fontSize: 27,
+        color: '#FFFFFF',
+        fontFamily: 'OpenSans_600SemiBold',
         paddingHorizontal: '3%',
-        paddingTop: '3%',
+        paddingBottom: '5%',
         textAlign: 'center'
     },
     imageWrapper: {
