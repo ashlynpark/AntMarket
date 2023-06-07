@@ -3,6 +3,7 @@ import Screen from '../components/Screen';
 import Header from '../components/Header';
 import { FontAwesome5 } from '@expo/vector-icons';  
 import Carousel from 'react-native-reanimated-carousel';
+import { useNavigation } from '@react-navigation/native';
 
 interface Item{
   name: string;
@@ -90,6 +91,7 @@ const Border = () => {
 
   const ItemCard: React.FC<ItemCardProps> = ({items}) => {
   const taxRate = 0.0725; // Assuming 8% tax rate
+  const navigation = useNavigation();
 
   return (
     <View>
@@ -132,7 +134,7 @@ const Border = () => {
                 <Text style={styles.sectionTitle}>Total: ${(item.cost + (item.cost * taxRate)).toFixed(2)}</Text>
               </View>
             </View>
-            <TouchableOpacity style={styles.checkoutButton} onPress={() => console.log('Checkout pressed')}>
+            <TouchableOpacity style={styles.checkoutButton} onPress={() => navigation.navigate("Checkout")}>
               <Text style={styles.checkoutButtonText}>CHECKOUT</Text>
             </TouchableOpacity>
           </View>

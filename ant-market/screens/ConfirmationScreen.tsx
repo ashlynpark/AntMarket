@@ -3,6 +3,7 @@ import Screen from '../components/Screen';
 import Header from '../components/Header';
 import { FontAwesome5 } from '@expo/vector-icons';  
 import Carousel from 'react-native-reanimated-carousel';
+import { useNavigation } from '@react-navigation/native';
 
 interface Item{
   name: string;
@@ -111,9 +112,10 @@ const BorderNew = () => {
 }
 
 const ContinueButton = () => {
+  const navigation = useNavigation();
   const handlePress = () => {
     // Add your functionality here
-    console.log('Continue button pressed');
+    navigation.navigate('home');
   };
 
   return (

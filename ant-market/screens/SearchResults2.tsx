@@ -11,7 +11,6 @@ import listings from '../data/moreDummyListings.json';
 import { useNavigation, useRoute } from '@react-navigation/native';
 
 const SearchResults2 = () => {
-    const navigation = useNavigation()
     const route = useRoute()
     const wtf = route.params
     return(
@@ -30,8 +29,9 @@ const SearchResults2 = () => {
 }
 
 const Listing = (props: {listing : any}) => {
+    const navigation = useNavigation();
     return(
-        <TouchableOpacity style={styles.listingCard}>
+        <TouchableOpacity style={styles.listingCard}  onPress={() => {let data = props.listing; navigation.navigate("single listing", data)}}>
             <View style={{flex: 1.2}}>
                 <Image source={{uri: props.listing.image}} style={styles.listingImg} />
             </View>

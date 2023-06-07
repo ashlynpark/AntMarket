@@ -329,9 +329,10 @@ const Border = () => {
   }
   
   const PayOrder = () => {
+    const navigation = useNavigation();
     const handlePress = () => {
       // Add your functionality here
-      console.log('Pay button pressed');
+      navigation.navigate("Confirmation");
     };
   
     return (

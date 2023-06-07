@@ -1,9 +1,10 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import SwipeDeck from "../screens/SwipeDeck";
+import HomeNavigator from "./home-navigator";
 import CheckoutScreen from "../screens/CheckoutScreen";
 import CartScreen from "../screens/CartScreen";
 import ConfirmationScreen from "../screens/ConfirmationScreen";
+
 
 const Stack = createNativeStackNavigator()
 

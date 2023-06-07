@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, Modal, Button, Dimensions, TouchableOpacity, SafeAreaView, ImageBackground, ScrollView, Touchable, FlatList, Image} from 'react-native';
+import {StyleSheet, Text, View, Modal, Button, TextInput, Dimensions, TouchableOpacity, SafeAreaView, ImageBackground, ScrollView, Touchable, FlatList, Image} from 'react-native';
 import Screen from '../components/Screen';
 import Header from '../components/Header';
 import { FontAwesome5 } from '@expo/vector-icons';  
@@ -88,6 +88,10 @@ const CreateScreen = () => {
 const PostButt = () => {
     const [modalVisible, setModalVisible] = useState(false);
     const [photoURL, setPhotoURL] = useState(require('../assets/default_photo.jpeg'))
+    const [title, onChangeTitle] = useState('');
+    const [description, onChangeDescription] = useState('');
+    const [price, onChangePrice] = useState('');
+    const [free, setFree] = useState(false);
 
     return(
         <View>
@@ -110,7 +114,7 @@ const PostButt = () => {
                     <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
                         <Text style={[styles.header, {margin: '2%'}]}>New Listing</Text> 
                         <View style={{}}>
-                            <IconButton icon={props => <AntDesign name="closecircleo" size={24} color="#4a4a4a" />} onPress={() => {setPhotoURL(require('../assets/default_photo.jpeg')); setModalVisible(false)}}/>
+                            <IconButton icon={props => <AntDesign name="closecircleo" size={30} color="gray" />} onPress={() => {setPhotoURL(require('../assets/default_photo.jpeg')); setModalVisible(false)}}/>
                         </View>                       
                     </View>
 
@@ -118,17 +122,67 @@ const PostButt = () => {
                         <View style={styles.newPostImgContainer}>
                             <Image source={photoURL} style={styles.newPostImg}/>
                         </View>
-                        <View style={{flexDirection: 'row'}}>
-                            <TouchableOpacity onPress={()=>setPhotoURL({uri: 'https://i.etsystatic.com/12021168/r/il/57ad51/3650822946/il_1588xN.3650822946_nj7j.jpg'})} style={{flex: 1,marginLeft: '9%', marginRight: '5%', borderRadius: 10, height: '50%', backgroundColor: 'white', borderColor: '#678D58', borderWidth: 2, justifyContent:'center', shadowColor: 'black', shadowOffset: {width: 0, height: 2}, shadowOpacity: 0.5}}>
+                        <View style={{flexDirection: 'row', height: 80}}>
+                            <TouchableOpacity onPress={()=>setPhotoURL({uri: 'https://i.etsystatic.com/12021168/r/il/57ad51/3650822946/il_1588xN.3650822946_nj7j.jpg'})} style={{flex: 1,marginLeft: '9%', marginRight: '5%', borderRadius: 10, height: '50%', backgroundColor: 'white', borderColor: '#678D58', borderWidth: 2, justifyContent:'center', shadowColor: '#678D58', shadowOffset: {width: 0, height: 2}, shadowOpacity: 0.5}}>
                                 <Text style={{color: '#678D58', fontFamily: 'OpenSans_600SemiBold', fontSize: 16, alignSelf: 'center'}}>Take Photo</Text>
                             </TouchableOpacity>
-                            <TouchableOpacity onPress={()=>setPhotoURL({uri: 'https://i.etsystatic.com/12021168/r/il/57ad51/3650822946/il_1588xN.3650822946_nj7j.jpg'})} style={{paddingVertical: 2,flex: 1,marginRight: '9%',  marginLeft: '5%', borderRadius: 10, height: '50%', borderColor: '#678D58', borderWidth: 2,justifyContent:'center', backgroundColor: 'white', shadowColor: 'black', shadowOffset: {width: 0, height: 2}, shadowOpacity: 0.5}}>
+                            <TouchableOpacity onPress={()=>setPhotoURL({uri: 'https://i.etsystatic.com/12021168/r/il/57ad51/3650822946/il_1588xN.3650822946_nj7j.jpg'})} style={{paddingVertical: 2,flex: 1,marginRight: '9%',  marginLeft: '5%', borderRadius: 10, height: '50%', borderColor: '#678D58', borderWidth: 2,justifyContent:'center', backgroundColor: 'white', shadowColor: '#678D58', shadowOffset: {width: 0, height: 2}, shadowOpacity: 0.5}}>
                                 <Text style={{width: '80%', color: '#678D58', fontFamily: 'OpenSans_600SemiBold', fontSize: 16, textAlign: 'center', alignSelf: 'center'}}>Upload</Text>
                             </TouchableOpacity>
                             
 
                         </View>
-                        <Text> Listing Title</Text>
+                        <View style={{marginHorizontal: '2%', marginTop: '-4%', flex: 1}}>
+                            <View style={{marginTop: '2%'}}>
+                                <Text style={styles.fieldTitle}>
+                                    Listing Title
+                                </Text>
+                                <View style={{flex: 1, padding: '2%', borderColor: 'gray', borderWidth: 1,  borderRadius: 5}}>
+                                    <TextInput
+                                        onChangeText={onChangeTitle}
+                                        value={title}
+                                        autoCapitalize='none'
+                                        placeholder='Title'
+                                        style={{fontFamily: 'OpenSans_300Light', fontSize: 16}}
+                                    /> 
+                                </View>
+                            </View>
+                            <View style={{marginTop: '4%'}}>
+                                <Text style={styles.fieldTitle}>
+                                    Description
+                                </Text>
+                                <View style={{flex: 1, padding: '2%', borderColor: 'gray', borderWidth: 1,  borderRadius: 5, height: 100}}>
+                                    <TextInput
+                                        onChangeText={onChangeDescription}
+                                        value={description}
+                                        autoCapitalize='none'
+                                        placeholder='Description'
+                                        style={{fontFamily: 'OpenSans_300Light', fontSize: 16}}
+                                    /> 
+                                </View>
+                            </View>
+                            <View style={{marginTop: '4%', flexDirection: 'row'}}>
+                                <View>
+                                    <Text style={styles.fieldTitle}>
+                                        Price
+                                    </Text>
+                                    <View style={{flex: 1, padding: '2%', borderColor: 'gray', borderWidth: 1,  borderRadius: 5, width: 80}}>
+                                        <TextInput
+                                            onChangeText={onChangePrice}
+                                            value={price}
+                                            style={{fontFamily: 'OpenSans_300Light', fontSize: 16}}
+                                            keyboardType='numeric' 
+                                            
+                                        /> 
+                                    </View>
+                                </View>
+    
+                            </View>
+                            <View style={{flexDirection: 'row'}}>
+                                {/* CANCEL BUTTON GOES HERE */}
+                                {/* POST BUTTON GOES HERE */}
+                            </View>
+                        </View>
                     </ScrollView>
  
                 </SafeAreaView>
@@ -318,6 +372,11 @@ const styles = StyleSheet.create({
         resizeMode: 'contain',
         height: '100%',
     },
+    fieldTitle:{
+        fontSize: 16,
+        fontFamily: 'OpenSans_500Medium',
+        marginBottom: '1%'
+    }
 })
 
 export default CreateScreen;

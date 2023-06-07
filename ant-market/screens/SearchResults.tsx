@@ -8,7 +8,6 @@ import chairsListings from '../data/chairsListings.json';
 import { useNavigation, useRoute } from '@react-navigation/native';
 
 const SearchResults = () => {
-    const navigation = useNavigation()
     const route = useRoute()
     const wtf = route.params
     return(
@@ -27,8 +26,10 @@ const SearchResults = () => {
 }
 
 const Listing = (props: {listing : any}) => {
+    const navigation = useNavigation();
+
     return(
-        <TouchableOpacity style={styles.listingCard}>
+        <TouchableOpacity style={styles.listingCard} onPress={() => {let data = props.listing; navigation.navigate("single listing", data)}}>
             <View style={{flex: 1.2}}>
                 <Image source={{uri: props.listing.image}} style={styles.listingImg} />
             </View>

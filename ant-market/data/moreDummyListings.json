@@ -1,10 +1,10 @@
 [
     {
         "name": "UCI sweatshirt",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor piscing elit, sed do eiusm oinc ididunt od tempor incididu ut labore et dolore magna aliqua.",
-        "location": "San Jose, California",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor piscing elit, sed do eiusm oinc ididunt od tempor incididu ut labore et dolore magna aliqua sed do eiusmod tempor piscing elit, sed do eiusm oinc ididunt od tempor incididu ut labore et dolore magna aliqua.",
+        "location": "Irvine, California",
         "image": "https://cdn.shopify.com/s/files/1/0009/0839/4551/products/CIR-CREW-001_a7753bad-98b1-4d6f-a276-145f27a7c335_1400x.png?v=1668527510",
-        "seller": "down_with_irvine_company",
+        "seller": "irvinecompanysux",
         "price" : 0
     },
     {

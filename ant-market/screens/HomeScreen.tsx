@@ -211,7 +211,8 @@ const styles = StyleSheet.create({
     catButtTitle: {
         fontSize: 20,
         fontFamily: 'OpenSans_600SemiBold',
-        alignSelf: 'center'
+        alignSelf: 'center',
+        color: '#678D58'
     },
     postButt: {
         alignSelf: 'center',
