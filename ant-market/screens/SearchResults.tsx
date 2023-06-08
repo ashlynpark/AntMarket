@@ -4,26 +4,34 @@ import Header from '../components/Header';
 import { FontAwesome5 } from '@expo/vector-icons';  
 import { MaterialIcons } from '@expo/vector-icons'; 
 import React, { useState, useEffect } from 'react';
-import chairsListings from '../data/chairsListings.json';
+import listings from '../data/dummyListings.json';
 import { useNavigation, useRoute } from '@react-navigation/native';
 
 const SearchResults = () => {
-    const route = useRoute()
-    const wtf = route.params
-    return(
-        <Screen preset='scroll'>
-            <Header/>
-            <Search prevSearch='chairs'/>
-            <View>
-                {chairsListings.map((item, index) => {
-                    return(
-                        <Listing key={index} listing={item}/>
-                    )
-                })}
-            </View>
-        </Screen>
-    )
-}
+    const route = useRoute();
+    const searchTerm = JSON.parse(JSON.stringify(route.params));
+    const singularSearchTerm = (searchTerm?.toLowerCase() ?? '');
+    const matched = listings.filter((item) => {
+      const itemName = item.name.toLowerCase();
+      return itemName.includes(singularSearchTerm);
+    });
+  
+    return (
+      <Screen preset='scroll'>
+        <Header />
+        <Search prevSearch={searchTerm} />
+        <View>
+          {matched.length > 0 ? (
+            matched.map((item, index) => (
+              <Listing key={index} listing={item} />
+            ))
+          ) : (
+            <Text>No matches found</Text>
+          )}
+        </View>
+      </Screen>
+    );
+  };
 
 const Listing = (props: {listing : any}) => {
     const navigation = useNavigation();
