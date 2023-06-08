@@ -7,10 +7,26 @@ import React, { useState, useEffect } from 'react';
 import listings from '../data/dummyListings.json';
 import { useNavigation, useRoute } from '@react-navigation/native';
 
+// to make search terms match even if plural
+function singularize(word: string): string {
+    const endings: Record<string, string> = {
+      ves: 'fe',
+      ies: 'y',
+      i: 'us',
+      zes: 'ze',
+      ses: 's',
+      es: 'e',
+      s: ''
+    };
+    return word.replace(
+      new RegExp(`(${Object.keys(endings).join('|')})$`),
+      (match) => endings[match as keyof typeof endings]
+    );
+  }
 const SearchResults = () => {
     const route = useRoute();
     const searchTerm = JSON.parse(JSON.stringify(route.params));
-    const singularSearchTerm = (searchTerm?.toLowerCase() ?? '');
+    const singularSearchTerm = singularize(searchTerm?.toLowerCase() ?? '');
     const matched = listings.filter((item) => {
       const itemName = item.name.toLowerCase();
       return itemName.includes(singularSearchTerm);
@@ -59,7 +75,7 @@ const Search = (props: {prevSearch : string}) => {
     const SearchButton = () => {
         return(
         
-            <TouchableOpacity onPress={() => navigation.navigate('Search Results')} style={[styles.buttonContainer, {backgroundColor: '#A6C48A'}]}>
+            <TouchableOpacity onPress={() => navigation.navigate('Search Results', text)} style={[styles.buttonContainer, {backgroundColor: '#A6C48A'}]}>
                 <FontAwesome5 name="search" size={22} color="white" />
             </TouchableOpacity> 
     
