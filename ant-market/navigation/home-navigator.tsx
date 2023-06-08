@@ -6,50 +6,48 @@ import SearchResults from "../screens/SearchResults";
 import SearchResults2 from "../screens/SearchResults2";
 import SingleListing from "../screens/SingleListing";
 
-const Stack = createNativeStackNavigator()
+const Stack = createNativeStackNavigator();
 
 const HomeNavigator = () => {
-    return (
-        <Stack.Navigator initialRouteName="home">       
-            <Stack.Screen 
-                name="home"
-                component={HomeScreen}
-                options={{
-                    headerShown: false
-                }}
-            />            
-            <Stack.Screen 
-                name="Swipe Deck"
-                component={SwipeDeck}
-                options={{
-                    headerShown: false
-                }}
-            />
-            <Stack.Screen 
-                name="Search Results"
-                component={SearchResults}
-                options={{
-                    headerShown: false
-                }}
-            />
-            <Stack.Screen 
-                name="Search Results2"
-                component={SearchResults2}
-                options={{
-                    headerShown: false
-                }}
-            />
-            <Stack.Screen 
-                name="single listing"
-                component={SingleListing}
-                options={{
-                    headerShown: false
-                }}
-            />
-        </Stack.Navigator>
-
-
-    )
-}
+  return (
+    <Stack.Navigator initialRouteName="home">
+      <Stack.Screen
+        name="home"
+        component={HomeScreen}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="Swipe Deck"
+        component={SwipeDeck}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="Search Results"
+        component={SearchResults}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="Search Results2"
+        component={SearchResults2}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="single listing"
+        component={SingleListing}
+        options={{
+          headerShown: false,
+        }}
+      />
+    </Stack.Navigator>
+  );
+};
 
 export default HomeNavigator;

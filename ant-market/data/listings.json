@@ -1,41 +1,41 @@
 [
-    {
-        "title":"Comfy Brown Sofa",
-        "seller":"anteaterLover",
-        "location":"Irvine, CA",
-        "description": "Gently used comfy brown sofa. Acquired from a furniture store in 2019. There is one coffee stain on the armrest but it is barely noticeable.",
-        "price": 130,
-        "images":[
-            {
-                "imageURL":"brown-sofa.jpg"
-            }
-        ],
-        "saved":false
-    },
-    {
-        "title":"Swiveling Desk Chair",
-        "seller":"boba",
-        "location":"Irvine, CA",
-        "description": "Wheeeeeeeeeeeeeeee",
-        "price": 25,
-        "images":[
-            {
-                "imageURL":"defaultphoto.png"
-            }
-        ],
-        "saved":false
-    },
-    {
-        "title":"Refurbished Macbook",
-        "seller":"anteaterLover",
-        "location":"Irvine, CA",
-        "description": "Refurbished laptop, works most of the time",
-        "price": 300,
-        "images":[
-            {
-                "imageURL":"defaultphoto.png"
-            }
-        ],
-        "saved":false
-    }
+  {
+    "title": "Comfy Brown Sofa",
+    "seller": "anteaterLover",
+    "location": "Irvine, CA",
+    "description": "Gently used comfy brown sofa. Acquired from a furniture store in 2019. There is one coffee stain on the armrest but it is barely noticeable.",
+    "price": 130,
+    "images": [
+      {
+        "imageURL": "brown-sofa.jpg"
+      }
+    ],
+    "saved": false
+  },
+  {
+    "title": "Swiveling Desk Chair",
+    "seller": "boba",
+    "location": "Irvine, CA",
+    "description": "Wheeeeeeeeeeeeeeee",
+    "price": 25,
+    "images": [
+      {
+        "imageURL": "defaultphoto.png"
+      }
+    ],
+    "saved": false
+  },
+  {
+    "title": "Refurbished Macbook",
+    "seller": "anteaterLover",
+    "location": "Irvine, CA",
+    "description": "Refurbished laptop, works most of the time",
+    "price": 300,
+    "images": [
+      {
+        "imageURL": "defaultphoto.png"
+      }
+    ],
+    "saved": false
+  }
 ]

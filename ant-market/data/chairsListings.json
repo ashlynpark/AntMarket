@@ -1,45 +1,42 @@
 [
-    {
-        "name": "Rolling Chair, outside for some reason",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "location": "San Francisco, California",
-        "image": "https://www.randmoffice.com/wp-content/uploads/2019/01/Steelcase-Amia.jpg",
-        "seller": "_ant_eater_luvr_",
-        "price": 28
-
-    },
-    {
-        "name": "office chair",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex",
-        "location": "ACC, Irvine, California",
-        "image": "https://www.ikea.com/us/en/images/products/hattefjaell-office-chair-with-armrests-smidig-black__1019087_pe831296_s5.jpg",
-        "seller": "joe_eater",
-        "price": 54
-    },
-    {
-        "name": "comfy armchair, GENTLY USED",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "location": "Houston, Texas",
-        "image": "https://d6qwfb5pdou4u.cloudfront.net/product-images/6640001-6650000/6644132/7ae2465679cb87a90b5a5b5847d3a6a6d822fcb474177ddafa13e19219794d64/500-500-crop-0.jpg",
-        "seller": "howard_g",
-        "price": 50
-    },
-    {
-        "name": "Used Couch and loveseat",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "location": "New York City, New York",
-        "image": "https://patch.com/img/cdn20/users/25901541/20220318/050011/img-3067___18170008576.jpg",
-        "seller": "glamkid2000",
-        "price": 67
-
-    },
-    {
-        "name": "pink vintage armchair hell yeah",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "location": "Irvine, California",
-        "image": "https://cdn.shopify.com/s/files/1/0305/7700/0584/products/232-ROSIE_Pink_Vintage_Armchair.jpg?v=1581605997",
-        "seller": "haha69",
-        "price": 0
-
-    }
+  {
+    "name": "Rolling Chair, outside for some reason",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "location": "San Francisco, California",
+    "image": "https://www.randmoffice.com/wp-content/uploads/2019/01/Steelcase-Amia.jpg",
+    "seller": "_ant_eater_luvr_",
+    "price": 28
+  },
+  {
+    "name": "office chair",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex",
+    "location": "ACC, Irvine, California",
+    "image": "https://www.ikea.com/us/en/images/products/hattefjaell-office-chair-with-armrests-smidig-black__1019087_pe831296_s5.jpg",
+    "seller": "joe_eater",
+    "price": 54
+  },
+  {
+    "name": "comfy armchair, GENTLY USED",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "location": "Houston, Texas",
+    "image": "https://d6qwfb5pdou4u.cloudfront.net/product-images/6640001-6650000/6644132/7ae2465679cb87a90b5a5b5847d3a6a6d822fcb474177ddafa13e19219794d64/500-500-crop-0.jpg",
+    "seller": "howard_g",
+    "price": 50
+  },
+  {
+    "name": "Used Couch and loveseat",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "location": "New York City, New York",
+    "image": "https://patch.com/img/cdn20/users/25901541/20220318/050011/img-3067___18170008576.jpg",
+    "seller": "glamkid2000",
+    "price": 67
+  },
+  {
+    "name": "pink vintage armchair hell yeah",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "location": "Irvine, California",
+    "image": "https://cdn.shopify.com/s/files/1/0305/7700/0584/products/232-ROSIE_Pink_Vintage_Armchair.jpg?v=1581605997",
+    "seller": "haha69",
+    "price": 0
+  }
 ]

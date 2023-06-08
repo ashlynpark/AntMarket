@@ -5,37 +5,34 @@ import CheckoutScreen from "../screens/CheckoutScreen";
 import CartScreen from "../screens/CartScreen";
 import ConfirmationScreen from "../screens/ConfirmationScreen";
 
-
-const Stack = createNativeStackNavigator()
+const Stack = createNativeStackNavigator();
 
 const CheckoutNavigator = () => {
-    return (
-        <Stack.Navigator initialRouteName="Cart page">       
-            <Stack.Screen 
-                name="Cart page"
-                component={CartScreen}
-                options={{
-                    headerShown: false
-                }}
-            />            
-            <Stack.Screen 
-                name="Checkout"
-                component={CheckoutScreen}
-                options={{
-                    headerShown: false
-                }}
-            />
-            <Stack.Screen 
-                name="Confirmation"
-                component={ConfirmationScreen}
-                options={{
-                    headerShown: false
-                }}
-            />
-        </Stack.Navigator>
-
-
-    )
-}
+  return (
+    <Stack.Navigator initialRouteName="Cart page">
+      <Stack.Screen
+        name="Cart page"
+        component={CartScreen}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="Checkout"
+        component={CheckoutScreen}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="Confirmation"
+        component={ConfirmationScreen}
+        options={{
+          headerShown: false,
+        }}
+      />
+    </Stack.Navigator>
+  );
+};
 
 export default CheckoutNavigator;
