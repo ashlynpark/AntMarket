@@ -19,6 +19,7 @@ import { RadioButton } from "react-native-paper";
 
 // to make search terms match even if plural
 const screenHeight = Dimensions.get("window").height;
+const screenWidth = Dimensions.get("window").width;
 
 function singularize(word: string): string {
   const endings: Record<string, string> = {
@@ -99,9 +100,9 @@ const Search = (props: { prevSearch: string }) => {
   const [text, onChangeText] = useState(props.prevSearch);
   const navigation = useNavigation();
   const handleSearch = () => {
-    if(text !== ""){
-    navigation.navigate("Search Results", text);
-    onChangeText("");
+    if (text !== "") {
+      navigation.navigate("Search Results", text);
+      onChangeText("");
     }
   };
 
@@ -159,40 +160,49 @@ const Search = (props: { prevSearch: string }) => {
           <FontAwesome5 name="sliders-h" size={20} color="#484848" />
         </TouchableOpacity>
         <Modal animationType="slide" visible={showFilter} transparent={true}>
-          <View style={[styles.sortFilterCon, { height: screenHeight / 2 }]}>
-            <TouchableOpacity onPress={() => setShowFilter(false)}>
-              <FontAwesome5 name="times" size={60} color="#484848" />
-            </TouchableOpacity>
+          <View
+            style={[
+              styles.sortFilterCon,
+              { height: screenHeight / 3 + 20, width: screenWidth - 20 },
+            ]}
+          >
+            <View style={{ flexDirection: "row", justifyContent: "flex-end" }}>
+              <TouchableOpacity onPress={() => setShowFilter(false)}>
+                <FontAwesome5 name="times" size={40} color="#484848" />
+              </TouchableOpacity>
+            </View>
             {/* Sorting Section */}
             <View>
               <RadioButton.Group
                 onValueChange={handleSortOption}
                 value={sortOption}
               >
-                <View>
+                <View style={styles.radioButton}>
                   <RadioButton value="price" />
                   <Text>Sort by Price</Text>
                 </View>
-                <View>
+                <View style={styles.radioButton}>
                   <RadioButton value="name" />
                   <Text>Sort by Name</Text>
                 </View>
               </RadioButton.Group>
             </View>
             {/* Filtering Section */}
-            <View>
-              <FontAwesome5 name="filter" size={20} color="#484848" />
+            <View style={{ marginTop: 50 }}>
               <Text>
                 Price Range: ${minPrice} - ${maxPrice}
               </Text>
               <Slider
-                style={{ width: 200, height: 40 }}
+                style={{ width: screenWidth - 60, height: 40 }}
                 minimumValue={0}
-                maximumValue={250}
+                maximumValue={300}
                 minimumTrackTintColor="#FFFFFF"
-                maximumTrackTintColor="#000000"
+                maximumTrackTintColor="#A6C48A"
               />
             </View>
+            <TouchableOpacity onPress={() =>setShowFilter(false)}>
+            <FontAwesome5 name="check" size={20} color="white" />
+            </TouchableOpacity>
           </View>
         </Modal>
       </View>
@@ -335,9 +345,24 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     padding: 20,
     borderWidth: 1,
-    borderColor: "#000000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowColor: "#000000",
+    shadowRadius: 4,
+    elevation: 2,
+    borderColor: "white",
     borderRadius: 7,
-    margin: 50,
+    marginTop: 50,
+    marginLeft: 10,
+  },
+  radioButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: 10,
+    borderWidth: 1,
+    borderColor: "#A6C48A",
+    padding: 5,
+    borderRadius: 5,
   },
 });
 
