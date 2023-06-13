@@ -1,19 +1,21 @@
 # AntMarket SofaRats
 
- SETUP:
- 
---> Navigate to the repository and run npm install
+Make sure to have node and the expo-cli installed globally
 
---> Install expo: npx expo install react-native-safe-area-context@4.5.0 @types/react@~18.0.27 typescript@^4.9.4  
+》 npm install -g expo-cli
 
----> If jsx is not working properly, open the tsconfig.json file and check that the extension is loaded by saving the file.
+》 npm install -g npm
 
+https://nodejs.org/en/download
 
-Running:
+Navigate to our project folder from the root
 
---> npm start  
+》cd ant-market
 
----> then choose the appropriate development environment, Scan the QR code with your phone camera and it should launch Expo go (app).
+Install Packages
 
+》npm install
 
+Run the Project with Expo
 
+》npx expo start
